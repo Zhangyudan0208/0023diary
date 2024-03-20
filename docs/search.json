@@ -9,9 +9,9 @@
   {
     "objectID": "week2.html#xaringan-presentation---ikonos-2",
     "href": "week2.html#xaringan-presentation---ikonos-2",
-    "title": "1  week2",
-    "section": "1.1 Xaringan Presentation - IKONOS-2",
-    "text": "1.1 Xaringan Presentation - IKONOS-2\nThe content for week 2 is a presentation in Xaringan on the Ikonos-2 satellite. The presentation is below, and the summary, application and reflection are all included in the slides."
+    "title": "2  week2",
+    "section": "2.1 Xaringan Presentation - IKONOS-2",
+    "text": "2.1 Xaringan Presentation - IKONOS-2\nThe content for week 2 is a presentation in Xaringan on the Ikonos-2 satellite. The presentation is below, and the summary, application and reflection are all included in the slides."
   },
   {
     "objectID": "intro.html",
@@ -33,5 +33,12 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "week1.html",
+    "href": "week1.html",
+    "title": "1  week1",
+    "section": "",
+    "text": "111"
   }
 ]

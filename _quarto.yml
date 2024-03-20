@@ -7,6 +7,7 @@ book:
   date: "2024/1/23"
   chapters:
     - index.qmd
+    - week1.qmd
     - week2.qmd
     - intro.qmd
     - summary.qmd
