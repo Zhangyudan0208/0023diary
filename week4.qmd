@@ -22,12 +22,12 @@ China is currently leading the current global trend in carbon emissions along wi
 
 Shanghai, as the first Chinese city to enter the post-industrialisation phase, is striving to meet China's energy intensity and pollution reduction targets, and regulations have been enacted at the city level, such as reducing energy consumption per unit of gross domestic product (GDP) by 14 per cent by 2025 compared to 2020, and striving to reach a 20 per cent share of non-fossil energy in total energy consumption. Conducting estimation and management of natural carbon stocks is one of its main tasks (Shanghai Municipal Government 2022).
 
-| No. | Policy name                          | Aims                                                                                                                                                                                                                                                               |
-|------|---------------------------------|---------------------------------|
-| 1   | The Paris Agreement                  | The Goal of limiting global warming to 1.5°C                                                                                                                                                                                                                       |
-| 2   | C40 Leadership Standards             | Contribute to halving overall emissions in C40 cities by 2030; mainstream their equitable climate goals into the decision-making processes of the most influential cities                                                                                          |
-| 3   | China Plan for Carbon Dioxide Peak   | Peak and steady decline in carbon dioxide emissions by 2030, and successful achievement of the carbon neutrality target by 2060                                                                                                                                    |
-| 4   | Shanghai Carbon Peaking Action Plan  | By 2030, non-fossil energy sources will strive to account for 25 per cent of total energy consumption, and carbon dioxide emissions per unit of gross domestic product (GDP) will be reduced by 70 per cent compared with 2005, ensuring that carbon peaks by 2030 |
+| No. | Policy name                         | Aims                                                                                                                                                                                                                                                               |
+|-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | The Paris Agreement                 | The Goal of limiting global warming to 1.5°C                                                                                                                                                                                                                       |
+| 2   | C40 Leadership Standards            | Contribute to halving overall emissions in C40 cities by 2030; mainstream their equitable climate goals into the decision-making processes of the most influential cities                                                                                          |
+| 3   | China Plan for Carbon Dioxide Peak  | Peak and steady decline in carbon dioxide emissions by 2030, and successful achievement of the carbon neutrality target by 2060                                                                                                                                    |
+| 4   | Shanghai Carbon Peaking Action Plan | By 2030, non-fossil energy sources will strive to account for 25 per cent of total energy consumption, and carbon dioxide emissions per unit of gross domestic product (GDP) will be reduced by 70 per cent compared with 2005, ensuring that carbon peaks by 2030 |
 
 : Summary of carbon-neutral-related policies at different levels
 
@@ -37,7 +37,7 @@ Shanghai, as the first Chinese city to enter the post-industrialisation phase, i
 
 Carbon emissions in cities come from a variety of sources, and different levels of carbon emissions can be portrayed with different remote sensing tools. For example, the total nighttime light intensity value has a good correlation with carbon emissions. Zhang et al. ([Zhang et al., 2024](https://www.mdpi.com/2072-4292/16/1/23)) calculated the carbon emissions in China by using the long-series nighttime light dataset based on the calibration and fusion of the DMSP/OLS annual monthly image data and the NPP/VIIRS monthly image data in conjunction with the total nighttime light value, simulation coefficients, and the simulation intercepts of the study area.
 
-![Carbon emissions per capita at the provincial level in China (2000, 2005, 2010, 2015, 2019) ([Zhang et al., 2024](https://www.mdpi.com/2072-4292/16/1/23))](images/remotesensing-16-00023-g011 (1).png){width="657"}
+![Carbon emissions per capita at the provincial level in China (2000, 2005, 2010, 2015, 2019) ([Zhang et al., 2024](https://www.mdpi.com/2072-4292/16/1/23))](images/remotesensing-16-00023-g011%20(1).png){width="657"}
 
 Based on FROM-GLC10, the world's first 10 m resolution global surface coverage product, Ji et al. ([Ji et al., 2023](https://www.mdpi.com/2072-4292/15/6/1502)) constructed partial least squares regression, random forest, and geo-detection models using factors affecting building emissions, and investigated the effects of building compactness on carbon emissions from building energy consumption at different buffer distances in 59 cities in China.
 
@@ -57,8 +57,7 @@ This week I learned how to use the characteristics of remote sensing data such a
 
 ## References
 
-C40 Cities Climate Leadership Group & C40 Knowledge Hub, 2022. *C40 Cities with a Paris Climate Agreement compatible CAP* \[Online\].
-[https://www.google.com/maps/d/viewer?mid=1hR77I4BWAhKAb805TrazOV\_\_2DBsxUZ7]{.underline}.\
+C40 Cities Climate Leadership Group & C40 Knowledge Hub, 2022. *C40 Cities with a Paris Climate Agreement compatible CAP* \[Online\]. [https://www.google.com/maps/d/viewer?mid=1hR77I4BWAhKAb805TrazOV\_\_2DBsxUZ7]{.underline}.\
 
 Ji, R. et al., 2023. Green Space Compactness and Configuration to Reduce Carbon Emissions from Energy Use in Buildings, *Remote Sensing*. Multidisciplinary Digital Publishing Institute, årg. 15, nr. 6, s. 1502.\
 
@@ -68,7 +67,7 @@ Ribeiro, H.V., Rybski, D. & Kropp, J.P., 2019. Effects of changing population or
 
 Shanghai Municipal Government, 2022. Shanghai Carbon Peaking Action Plan. Shanghai, China.\
 
-The State Council of the People\'s Republic of China, 2021. China Rolls Out Plan for Carbon Dioxide Peak \[Online\].\
+The State Council of the People's Republic of China, 2021. China Rolls Out Plan for Carbon Dioxide Peak \[Online\].\
 [https://english.www.gov.cn/policies/latestreleases/202110/26/content_WS6178023cc6d0df57f98e3d5c.html]{.underline}.\
 
 Zhang, C. et al., 2023. Estimating the Forest Carbon Storage of Chongming Eco-Island, China, Using Multisource Remotely Sensed Data, *Remote Sensing*. Multidisciplinary Digital Publishing Institute, årg. 15, nr. 6, s. 1575.\
