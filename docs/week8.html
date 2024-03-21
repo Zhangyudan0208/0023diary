@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>diary - 6&nbsp; week7-Classification</title>
+<title>diary - 7&nbsp; week8</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week8.html" rel="next">
-<link href="./week5.html" rel="prev">
+<link href="./intro.html" rel="next">
+<link href="./week7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -142,13 +142,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week7.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week8.html" class="sidebar-item-text sidebar-link">
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8</span></span></a>
   </div>
 </li>
@@ -180,13 +180,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#classification-method" id="toc-classification-method" class="nav-link" data-scroll-target="#classification-method"><span class="header-section-number">6.1.1</span> Classification method</a></li>
+  <li><a href="#advanced-classification-methods" id="toc-advanced-classification-methods" class="nav-link" data-scroll-target="#advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced Classification Methods</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">6.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.3</span> Reflection</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6.4</span> References</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +195,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8</span></h1>
 </div>
 
 
@@ -210,397 +210,246 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
-<p>Remote sensing classification is based on the principle of dividing data into meaningful parts, defining categories based on specific objectives, and slicing the data in different ways.</p>
-<p>I have summarised case studies of remote sensing classification applications in order to visualise the purpose and significance of the work.</p>
-<table class="table">
-<caption>Classification Case Summaries</caption>
-<colgroup>
-<col style="width: 13%">
-<col style="width: 24%">
-<col style="width: 30%">
-<col style="width: 11%">
-<col style="width: 18%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Case</th>
-<th>Research interests</th>
-<th>Sensors</th>
-<th>Classified object</th>
-<th>Research target</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Urban expansion</td>
-<td>Landsat</td>
-<td>Urban and non-urban areas</td>
-<td>Analysing urban growth over time</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Air pollution and land cover</td>
-<td>Sentinel-3 (sea and land surface temperatures) and Sentinel-5 (major air pollutants)</td>
-<td>Pollutants and land use</td>
-<td>Understanding the relationship between pollutants and land use change</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Urban green space</td>
-<td>Medium-resolution imagery, hyperspectral data or various sensors such as LiDAR</td>
-<td>Urban green space</td>
-<td>For biodiversity, recreation and urban planning</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Illegal logging and forest monitoring</td>
-<td>Combination of sensors such as Landsat, MODIS</td>
-<td>Targeted areas affected by illegal logging</td>
-<td>Investigation of environmental offences</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Forest fire</td>
-<td>Landsat TM</td>
-<td>Fire hazard area</td>
-<td>Creating Fire Hazard Maps</td>
-</tr>
-</tbody>
-</table>
-<section id="classification-method" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="classification-method"><span class="header-section-number">6.1.1</span> Classification method</h3>
+<section id="summary" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
+<section id="advanced-classification-methods" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored" data-anchor-id="advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced Classification Methods</h3>
+<p>We have continued to learn about land cover classification methods and also learnt to cope with different data, compared to what we learnt last week, this week is mainly about how to deal with different objects.</p>
 <ol type="1">
-<li>Classification and regression trees (CART)</li>
+<li>Object-Based Image Analysis (OBIA)</li>
 </ol>
-<ul>
-<li>Classification trees</li>
-</ul>
-<p>Principles of building a classification tree:</p>
-<table class="table">
-<colgroup>
-<col style="width: 18%">
-<col style="width: 81%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>No</th>
-<th>Principle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1. start node</td>
-<td>The top of the tree is the root node and contains all the data</td>
-</tr>
-<tr class="even">
-<td>2. Segmentation criterion</td>
-<td>The Gini impurity criterion is used to select the best segmentation.</td>
-</tr>
-<tr class="odd">
-<td>3. Leaf nodes</td>
-<td>When further splits no longer increase the purity of a node, the node becomes a leaf node and corresponds to a decision result</td>
-</tr>
-<tr class="even">
-<td>4. Pruning</td>
-<td>To avoid overfitting, branches that do not significantly contribute to the model prediction can be removed</td>
-</tr>
-</tbody>
-</table>
+<p>OBIA is based on the geometrical and spectral properties of objects in an image for analysis and classification.</p>
+<p>The main principle of the method is related to hyperpixels. It aggregates neighbouring image elements with similar properties into hyperpixels, which are used to represent the actual objects on the ground. The hyperpixels are in turn generated by the Simple Linear Iterative Clustering algorithm. This algorithm calculates spatial distances and colour differences among regular points on the image, which can determine which image elements should be combined into a single hyperpixel, typically after 4-10 iterations, to better reflect the shape and size of the target object.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/4470355-fig-2-source-large.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Band-based CART Decision Tree for Distinguishing China Brazil Earth Resources Satellite (<a href="https://ieeexplore.ieee.org/document/4470355">Wen, Hu &amp; Yang 2008</a>)</figcaption>
+<p><img src="images/8.1.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">After pre-processing and feature extraction with spectral gradient and K-means clustering, simple non-iterative clustering and calculation of NDVI, super-pixel segmentation, training of CART using training data, classification of multi-band images (I think further optimisation is needed for image segmentation of classification objects)</figcaption>
 </figure>
 </div>
+<ul>
+<li>Advantages:</li>
+</ul>
 <table class="table">
-<caption>Classification tree features</caption>
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Can more accurately represent the actual objects on the ground such as buildings, more accurate classification results</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Has a variety of classifiers and software packages that can use different algorithms to provide more complex analyses and functions, such as Supercells package can use any distance measure</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Limitations:</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Does not take into account the connectivity between superpixels, which may lead to very small and difficult to interpret classification regions</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>using the Euclidean distance metric limits the suitable data types and classification needs.</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Performed in LAB colour space, which requires conversion of the raw data, affecting the accuracy of the classification.</td>
+</tr>
+</tbody>
+</table>
+<ol start="2" type="1">
+<li>Subpixel analysis</li>
+</ol>
+<p>This method is mainly used when a single pixel contains multiple land cover types and is also called spectral mixture analysis (SMA). Rather than assigning an entire pixel to one dominant land cover class, it estimates the proportion of each land cover type in the pixel.</p>
+<p>The basic principle is that the reflectance captured by a pixel is a combination of the reflectance of all land cover types (endmembers) within that pixel. By using the purely spectral characteristics of these endmembers, the analysis attempts to reverse derive the proportion of each endmembers contribution to the observed pixel value.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/8.2.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Using Dar-es-salaam as the study area, the sub-pixel analysis was completed by using Landsat 8 with dynamic end-element extraction, calculating the average spectral value of the delineated area, and calculating the percentage of each pixel in the image for each end-element type.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/8.3.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The subpixel images were enhanced and classified for each pixel with the largest percentage of land cover (e.g., 50% or more). Reducing the subpixel results to a single classification prepares the way for later use of traditional error matrix methods to assess classification accuracy.</figcaption>
+</figure>
+</div>
+<ul>
+<li>Advantages:</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Provides a more detailed understanding of land cover by disaggregating the components within a pixel, further effectively improving the resolution of land cover information compared to full pixel classification</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>better capture minor changes in the landscape as the land is monitored over time</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Limitations:</li>
+</ul>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 93%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>1.</td>
+<td>Computationally complex, the more end-elements considered the more computationally intensive</td>
+</tr>
+<tr class="even">
+<td>2.</td>
+<td>Accuracy depends on the purity of the end elements. Impure spectral features can lead to unreliable results</td>
+</tr>
+<tr class="odd">
+<td>3.</td>
+<td>Analyses are limited by spectral library data, so comprehensive spectral libraries are needed as much as possible</td>
+</tr>
+</tbody>
+</table>
+<ol start="3" type="1">
+<li>Assessment of classification accuracy</li>
+</ol>
+<ul>
+<li>Confusion Matrix</li>
+</ul>
+<p>Confusion matrices are often used when performing accuracy assessments, being able to compare the classification results with an independent dataset of real ground conditions, providing a detailed view of the classification performance including: true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). And the accuracy values can be obtained through the confusion matrix.</p>
+<ul>
+<li>Classification of accuracy values</li>
+</ul>
+<table class="table">
+<caption>Table of accuracy value type</caption>
 <colgroup>
 <col style="width: 13%">
 <col style="width: 86%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Features</th>
-<th>Definitions</th>
+<th>Accuracy value</th>
+<th>Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Binary or multiple branches</td>
-<td>Each node can have two or more branches</td>
+<td>Producer’s accuracy</td>
+<td>A measure of accuracy from the producer’s perspective. Indicates the ratio of pixels that are correctly classified to all relevant pixels in that category (i.e., the sum of true positives and false negatives)</td>
 </tr>
 <tr class="even">
-<td>2. Decision rules</td>
-<td>At each node, the tree uses features of the data to form rules</td>
+<td>User accuracy</td>
+<td>Measures the ratio of correctly classified pixels to all pixels classified as that category (i.e., the sum of true positives and false positives). User accuracy is concerned with whether a pixel classified as a category actually belongs to that category</td>
 </tr>
 <tr class="odd">
-<td>3. Recursive splitting</td>
-<td>The tree starts at the root node and recursively splits the dataset according to the best split point of the feature values.</td>
-</tr>
-<tr class="even">
-<td>4. Node purity</td>
-<td>The quality of the segmentation is evaluated using Gini impurity to maximise the purity of each node (when leaves with mixed results are encountered, the segmentation with the greatest improvement in purity can be chosen)</td>
+<td>Overall Accuracy</td>
+<td>Indicates the proportion of correctly classified pixels across all categories and reflects the overall performance of the classification model</td>
 </tr>
 </tbody>
 </table>
+<p>In fact, application scenarios as well as requirements have to be considered when assessing the accuracy of classification models. For example, for land cover change detection, high overall accuracy may be most important. And for environmental monitoring, user accuracy may be more critical.</p>
+<p>Generally the Kappa coefficient can be used to assess the difference between classification accuracy and random classification accuracy, with higher values indicating better classification accuracy and greater likelihood of exceeding random classification. However, it has also been argued (<a href="https://www.sciencedirect.com/science/article/pii/S0034425719306509">Foody 2020</a>) that the Kappa coefficient does not directly reflect accuracy; it is simply a measure of classification consistency beyond the random level, and can indicate either consistency obtained by chance alone or almost perfect consistency, and the interpretation of its true significance is often ambiguous.</p>
 <ul>
-<li>Regression trees</li>
+<li>Validation data with cross-validation methods</li>
 </ul>
-<p>Unlike classification trees, which predict discrete values, regression trees predict numerical outcomes, such as the amount of pollution or test scores.</p>
-<p>Principles of building a regression tree</p>
+<p>Leave-One-Out Cross-Validation</p>
+<p>The number of folds is equal to the number of data points, and each iteration uses all but one data point for training and the missed points for testing. While maximising the amount of data used for training, the number of iterations is high and not practical for large datasets.</p>
+<p>Spatial cross-validation</p>
+<p>Due to the first law of geography (observations close to each other are more likely to be similar), the method spatially partitions the data so that the training and validation sets are not geographically intersected to avoid due to spatial autocorrelation.</p>
 <table class="table">
+<caption>Characteristics of Spatial cross-validation</caption>
 <colgroup>
 <col style="width: 22%">
 <col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>No.</th>
-<th>Principle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1. Predicting continuous variables</td>
-<td>Predicting a continuous value through the tree structure</td>
-</tr>
-<tr class="even">
-<td>2. Decision rules</td>
-<td>Rules are formed at each decision node based on input features and then numerical outputs are predicted based on these rules.</td>
-</tr>
-<tr class="odd">
-<td>3. Segmentation Criteria</td>
-<td>The total squared error (SSR) is used to decide where to segment the data in order to obtain the smallest possible error at each node.</td>
-</tr>
-<tr class="even">
-<td>4. Tree Growth</td>
-<td><p>The dataset is grown by recursively dividing it into more homogeneous subsets.</p>
-<p>Each split aims to maximise the uniformity of the nodes and minimise the error.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/新建 PPTX 演示文稿_页面_1-01.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">A Sentinel-2 satellite image collection was used to create a sample collection containing labels of land cover types, and a CART classifier was trained to carry out a land cover classification study for Shenzhen</figcaption>
-</figure>
-</div>
-<ul>
-<li>Limitation</li>
-</ul>
-<p>CART is easily overfitted without proper constraints and pruning and the main strategies to avoid overfitting are:</p>
-<table class="table">
-<colgroup>
-<col style="width: 9%">
-<col style="width: 90%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Strategy</th>
+<th>Characteristic</th>
 <th>Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Limit the growth of the tree</td>
-<td>Set a minimum number of observations (e.g.&nbsp;20) on the leaves of the tree to prevent the tree from becoming too complex</td>
+<td>1. Advantage</td>
+<td>in reducing the risk of overfitting the model to spatially similar data</td>
 </tr>
 <tr class="even">
-<td>2. Pruning</td>
-<td>Aims to remove nodes to reduce model complexity, the above nodes have the characteristic of increasing model complexity without significantly improving predictive ability. Cost Complexity Pruning is used to balance the fit and complexity of the tree by considering the complexity parameter alpha</td>
+<td>2. Requirement</td>
+<td>Sufficient data distribution is needed to create meaningful spatial partitions</td>
 </tr>
 <tr class="odd">
-<td>3. Cross-validation</td>
-<td>Repeat the modelling process on different training and test datasets, use cross-validation (e.g.10-fold cross-validation) to assess the generalisation ability of the model, and select the model with the lowest error on the test data</td>
+<td>3. Optimisation</td>
+<td>the hyperparameters of the SVM classifier need to be tuned to balance the model complexity and generalisation capabilities</td>
+</tr>
+<tr class="even">
+<td>4. Multiple iterations</td>
+<td>Multiple rounds of spatial partitioning and validation are required to ensure robustness</td>
 </tr>
 </tbody>
 </table>
-<ol start="2" type="1">
-<li>Random forest (RF)</li>
-</ol>
-<p>RF are an integrated learning method, mainly for classification (and regression), which runs by building a large number of decision trees during training and outputting the classes</p>
-<table class="table">
-<caption>Step-by-step table</caption>
-<colgroup>
-<col style="width: 2%">
-<col style="width: 17%">
-<col style="width: 79%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>No</th>
-<th>Step</th>
-<th>Principle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1</td>
-<td>Bootstrap sampling</td>
-<td>For each tree, a random sample of data (70%) is selected for replacement and 30% of the data is left out, called out-of-bag (OOB) data</td>
-</tr>
-<tr class="even">
-<td>2</td>
-<td>Random feature selection to build the tree</td>
-<td>A random subset of features is selected at each split to introduce additional randomness, ensuring that the trees are de-correlated and adding to the overall diversity</td>
-</tr>
-<tr class="odd">
-<td>3</td>
-<td>Aggregation</td>
-<td>Prediction by aggregation integration</td>
-</tr>
-<tr class="even">
-<td>4</td>
-<td>Out-of-bag error estimation</td>
-<td>Data that was omitted during tree construction can be used to obtain an unbiased estimate of classification accuracy as out-of-bag error</td>
-</tr>
-<tr class="odd">
-<td>5</td>
-<td>Assessment of feature importance</td>
-<td>Determined by the extent to which each feature reduces weighted impurities in the tree, averaged over all trees</td>
-</tr>
-</tbody>
-</table>
+</section>
+</section>
+<section id="applications" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
+<p>In conjunction with this week’s classification method, I have taken a look at its position in the development of remote sensing applications.</p>
+<p>Land use information has been extracted in different ways at different times in the development of remote sensing technology. In the early days, images captured by remote sensing sensors had larger pixels than ground features at low and medium resolution, so subpixel analysis was needed to respond to land class features(<a href="https://www.sciencedirect.com/science/article/pii/S0924271609000884">Blaschke 2010</a>). However, in the gradual increase of high-resolution imagery applications, the pixel-based analysis method is not able to respond to the spatial variations of land cover, so object-based image analysis becomes an effective method in high spatial resolution imagery applications. Due to its spectral, spatial, textural, and topological characteristics, and its ability to respond to geographic information, there has been a gradual increase in the number of studies and techniques related to geographic object-based image analysis (GEOBIA) (<a href="https://www.cambridge.org/core/journals/polar-record/article/remote-sensing-digital-image-processing-in-remote-sensing-jp-muller-editor-1988-london-taylor-and-francis-275-p-illustrated-hard-cover-isbn-0850663148-3800-us8400/7CCF3D9EED97C78CE8C6AB431647C513">Rees 1989</a>).</p>
+<p>Manne et al.&nbsp;(<a href="Object based Classification of Multispectral Remote Sensing Images for Forestry Applications">Suneetha et al.&nbsp;2020</a>) used object-based image analysis with three separate stages of segmentation, generation of training data and final classification to obtain the range of forestry based on remote sensing satellite images such as Deimos-2 and Cartosat-1. As learnt in the course. The measurement of the classification results was determined from four main aspects, namely, Producers Accuracy, Users Accuracy, Overall Accuracy and Kappa coefficient value. Although the accuracy value of the data in Cartosat-1 is low and the interpretation of the Kappa coefficient is debatable. However, it can show the usefulness of the method for multispectral image classification and can support the real needs such as ecological monitoring.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/3-s2.0-B9780128177365000090-f09-17-9780128177365.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">RF classifier is an ensemble method that trains several decision trees in parallel with bootstrapping followed by aggregation.(<a href="https://www.sciencedirect.com/science/article/pii/B9780128177365000090">Misra &amp; Li 2020</a>)</figcaption>
+<p><img src="images/Classified map of Deimos-2 using OBIA technique with radius 5.png" class="img-fluid figure-img" width="532"></p>
+<figcaption class="figure-caption">Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
 </figure>
 </div>
-<ul>
-<li>Advantages</li>
-</ul>
-<p>Random forests combine the results of individual trees into a more general model to deal with overfitting. It has more advantages：</p>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Advantages</th>
-<th>Definitions</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>1. Robustness</td>
-<td>Combining the predictions of many trees is more robust and accurate than a single decision tree.</td>
-</tr>
-<tr class="even">
-<td>2. Versatility</td>
-<td>Tree models are able to deal with complex non-linear relationships by branching multiple times, which provides a basis for dealing with classification problems (outputting the plurality of categories) and regression problems (outputting mean predictions).</td>
-</tr>
-</tbody>
-</table>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/新建 PPTX 演示文稿_页面_2-01.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">A Sentinel-2 satellite image collection was used to create a sample collection containing labels of land cover types, and a CART classifier was trained to carry out a land cover classification study for Shenzhen</figcaption>
+<p><img src="images/Accuracy assessment of OBIA.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
 </figure>
 </div>
-<ol start="3" type="1">
-<li>Maximum likelihood method (MLM) and Support Vector Machine (SVM)</li>
-</ol>
-<ul>
-<li>Comparison of the MLM and SVM</li>
-</ul>
-<p>Applicability: MLM is suitable for cases where statistical properties are obvious and a priori information is available, while SVM is more powerful when dealing with datasets with complex boundaries or non-linear distributions (higher dimensional).</p>
-<p>Robustness: Compared to MLM, which is more sensitive to outliers in the training data, SVM is usually more robust to outliers when using soft spacing.</p>
-<p>The characteristics of each are as follows：</p>
-<table class="table">
-<caption>Maximum likelihood method (probability-based decision rule classifier)</caption>
-<colgroup>
-<col style="width: 7%">
-<col style="width: 92%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Decision Making</td>
-<td>By comparing the feature statistics (e.g.&nbsp;mean and standard deviation) of a given pixel with the probability density function of each land cover type, the category with the highest probability is selected for the classification of that pixel</td>
-</tr>
-<tr class="even">
-<td>Threshold Setting</td>
-<td>Supports setting a probability threshold below which pixels are not classified to prevent classification uncertainty</td>
-</tr>
-<tr class="odd">
-<td>Prior probability</td>
-<td>Integrates a prior probability information, where the pre-known land cover type can be used in the classification process</td>
-</tr>
-</tbody>
-</table>
-<table class="table">
-<caption>Support Vector Machine (Linear Binary Classifier)</caption>
-<colgroup>
-<col style="width: 18%">
-<col style="width: 82%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Decision Making</td>
-<td>Finds a maximum interval (determined by the nearest support vector) to distinguish between two classes of training data</td>
-</tr>
-<tr class="even">
-<td>Soft Interval</td>
-<td>Allow a certain amount of classification error, determine how much misclassification is allowed by cross validation</td>
-</tr>
-<tr class="odd">
-<td>Kernel Trick</td>
-<td>If the data is not linearly separable, map the data to a higher dimensional space via a kernel function to achieve linear separability</td>
-</tr>
-<tr class="even">
-<td>Hyperparameters</td>
-<td>Adjust hyperparameters such as the penalty coefficient and the kernel function parameter to optimise</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
-<section id="applications" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">6.2</span> Applications</h2>
-<p>The methods of remote sensing classification have been in a developmental stage. The initial classification of remote sensing images was actually achieved through visual interpretation, mainly based on human experience and knowledge to interpret basic elements and specific signs to achieve the purpose of identifying the type of feature (<a href="https://www.webofscience.com/api/gateway?GWVersion=2&amp;SrcAuth=DynamicDOIArticle&amp;SrcApp=WOS&amp;KeyAID=10.3964%2Fj.issn.1000-0593%282011%2910-2618-06&amp;DestApp=DOI&amp;SrcAppSID=EUW1ED0A85I5cdPH3tK0Kn1QyfrZR&amp;SrcJTitle=SPECTROSCOPY+AND+SPECTRAL+ANALYSIS">Jia et al.&nbsp;2011</a>).</p>
-<p>In order to meet the requirement of providing classification accuracy, remote sensing researchers have been working on classification techniques and methods. For example initially developed various unsupervised and supervised classification techniques learnt this week, which can also be classified as parametric vs.&nbsp;non-parametric classifiers (<a href="https://www.sciencedirect.com/science/article/pii/S0034425705001604">Xu et al.&nbsp;2005</a>). In fact advanced classification algorithms such as neural networks, support vector machines, and expert systems have been widely used for a long time in the practice of classification such as urban planning and natural disaster monitoring.</p>
-<p>What intrigued me was the integration of multiple learned classification techniques. Du et al.&nbsp;(<a href="https://ieeexplore.ieee.org/document/6351609">Du et al.&nbsp;2012</a>) combined the advantages of support vector machines in solving the difficulties of small sample sizes and poor generalisation with the advantages of random forests being able to deal with hyperspectral imagery, and used a dynamic selection of a more appropriate specific classifier for each unclassified pixel to conduct AVIRIS image from Indian Pines Classification accuracy experiments were conducted on AVIRIS image from Indian Pines. It was found that the classification accuracy of the combination of the two classifiers was more accurate than the classification results with Support Vector Machines and Random Forests respectively. Such a study provides a solution to improve the classification accuracy of hyperspectral classification, as well as a reference for us to understand the characteristics and differences between the two specific classifiers.</p>
+<p>Hossain et al.&nbsp;(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>) summarised the research trends in image analysis based on geographic objects, and were able to find that the ability to match objects segmented from images with meaningful geographic objects is the key challenge in this field, and we can intuitively see that the cases and tools for this classification technique are improving significantly, so I also believe that continuous improvement of image segmentation techniques is also the future direction of research.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/下载.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Classification Results of AVIRIS image using a combination of Support Vector Machines and Random Forests (<a href="https://ieeexplore.ieee.org/document/6351609">Du et al.&nbsp;2012</a>)</figcaption>
+<p><img src="images/1-s2.0-S0924271619300425-gr1.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The amount of GEOBIA literature and some associated triggers(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>)</figcaption>
 </figure>
 </div>
-<p>However, remote sensing image classification methods are still affected by many factors, such as complex surface information, and classification applications still face challenges. For example, Cheng et al.&nbsp;(<a href="https://ieeexplore.ieee.org/document/9127795">Cheng et al.&nbsp;2020</a>) summarised the challenges in scene classification such as high diversity within classes, high similarity between classes, large differences in object proportions, and coexistence of multiple ground objects. Despite the rapid development of deep learning technology applications, as well as the existence of 1. large datasets without clean labels, fully supervised learning is difficult to work; model generalisation is not strong and many other problems. This illustrates the huge gap that still exists between the current machine and human understanding level performance. Therefore continued optimisation of deep learning driven remote sensing image classification in the future remains a worthwhile development.</p>
 </section>
-<section id="reflection" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.3</span> Reflection</h2>
-<p>This week I was exposed to an important part of processing remote sensing data, which is remote sensing image classification. I think this technique is practical and varied.</p>
-<p>Remote sensing image classification is actually the classification of each pixel point or each area in an image into different categories according to some rules based on their spectral features, spatial structure features or other information in different spectral bands. This is particularly important in the application of remote sensing data, because it is a conversion step to use remote sensing images as a tool to solve specific geographic problems, and I believe that every application of remote sensing will use this step of classification.</p>
-<p>Classification is diverse and there are different classification methods and approaches to choose for different classification tasks, from maximum likelihood classification to random forests and support vector machines, I find that research is needed to explore how to choose the right classification algorithms to ensure the accuracy of remote sensing data analysis. The choice of algorithm depends not only on the data characteristics (e.g., is it hyperspectral remote sensing?) , but also depends on the needs of the specific problem.</p>
-<p>Due to the wide range of spatial and temporal characteristics of remote sensing data, I believe that the trend of combining remote sensing classification with deep learning will continue in the future. I am very willing to learn and optimise classification methods, and although it is now possible to download finished remote sensing data that have been classified by different teams, e.g.&nbsp;land cover data, I believe that it is very valuable to have access to first-hand data and to process it.</p>
+<section id="reflection" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
+<p>After two weeks of learning about the classification process in remote sensing in detail, last week focused on the basic methods of classification such as CART, Random Forest and Support Vector Machines. This was mainly about classifying for single pixels, and this week further emphasised on classifying for super-pixel cases, and sub-pixel cases, as a step-by-step process. It had not occurred to me last week that there would also be classification for different objects, and this week’s classification study has inspired me. Indeed, in practical remote sensing applications, the needs are constantly increasing, so the classification methods are constantly improving. I think in the future, continue to improve the robustness of multispectral image segmentation algorithms, improve the edge, time and other feature sets, and improve the classification rules of decision trees(<a href="https://doi.org/10.1007/s11769-006-0282-0">Liu et al.&nbsp;2006</a>) will have continued research value in the field, and I also hope that more learning based on the object to complete the ecological monitoring aspects of the work, which is greatly beneficial to sustainable development and disaster monitoring.</p>
+<p>Meanwhile after a few weeks of systematic learning, we had a general understanding of the process of processing remote sensing data once we got it, just like the process of classification, which is from class definition, preprocessing, training, pixel assignment, and then accuracy assessment, and in the practical exercises, we also used GEE to understand how most of them work, which helped us to understand what we had learnt in the class. I also learnt through searching for applications that despite the different objects being classified, the classification tool methods used (e.g.&nbsp;decision trees) are common, which more than anything else allowed me to tie the two weeks of classes together.</p>
+<p>This week’s course also brought us a lot of dialectical thinking, through the study of accuracy verification I learnt that the starting point for thinking about a problem and evaluating the results is different for different objects (producers and users), and that we have different criteria for evaluating the results in different application scenarios. As in the example of kappa coefficients, their interpretative and imperative nature is not entirely certain, despite the fact that many scholars see them as agreed-upon steps. I think this is the idea that the instructor has been instilling in this course, to maintain <em>CRITICAL THINKING</em>, even in published articles.</p>
 </section>
-<section id="references" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="references"><span class="header-section-number">6.4</span> References</h2>
-<p>Cheng, G. et al., 2020. Remote Sensing Image Scene Classification Meets Deep Learning: Challenges, Methods, Benchmarks, and Opportunities, <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>, årg. 13, s. 3735–3756.</p>
-<p>Du, P. et al., 2012. <em>Hyperspectral remote sensing image classification based on the integration of support vector machine and random forest</em> [Online].</p>
-<p>Jia, K. et al., 2011. A Review of Classification Methods of Remote Sensing Imagery, <em>SPECTROSCOPY AND SPECTRAL ANALYSIS</em>. Beijing: Office Spectroscopy &amp; Spectral Analysis, årg. 31, nr. 10, s. 2618–2623.</p>
-<p>Misra, S. &amp; Li, H., 2020. Chapter 9 - Noninvasive fracture characterization based on the classification of sonic wave travel times [Online]. I: S. Misra, H. Li &amp; J. He red. <em>Machine Learning for Subsurface Characterization</em>. Gulf Professional Publishing, s. 243–287.</p>
-<p>Wen, X., Hu, G. &amp; Yang, X., 2008. <em>CBERS-02 Remote Sensing Data Mining Using Decision Tree Algorithm</em> [Online].</p>
-<p>Xu, M. et al., 2005. Decision tree regression for soft classification of remote sensing data, <em>Remote Sensing of Environment</em>, årg. 97, nr. 3, s. 322–336.<br>
-<br>
+<section id="references" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="references"><span class="header-section-number">7.4</span> References</h2>
+<p>Blaschke, T., 2010. Object based image analysis for remote sensing, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 65, nr. 1, s. 2–16.<br>
 </p>
+<p>Foody, G.M., 2020. Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification, <em>Remote Sensing of Environment</em>, årg. 239, s. 111630.<br>
+</p>
+<p>Hossain, M.D.&nbsp;&amp; Chen, D., 2019. Segmentation for Object-Based Image Analysis (OBIA): A review of algorithms and challenges from remote sensing perspective, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 150, s. 115–134.<br>
+</p>
+<p>Liu, Y. et al., 2006. Review of remotely sensed imagery classification patterns based on object-oriented image analysis, <em>Chinese Geographical Science</em>, årg. 16, nr. 3, s. 282–288.<br>
+</p>
+<p>Rees, G., 1989. Remote Sensing - Digital image processing in remote sensing., <em>Polar Record</em>, årg. 25, nr. 152, s. 67–67.<br>
+</p>
+<p>Suneetha, M. et al., 2020. <em>Object based Classification of Multispectral Remote Sensing Images for Forestry Applications</em> [Online]. New York, NY, USA: Association for Computing Machinery.</p>
 
 
 </section>
@@ -956,13 +805,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week5.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week6-GEE</span></span>
+      <a href="./week7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week8.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
