@@ -6,6 +6,7 @@ book:
   author: "Yudan Zhang"
   date: "2024/1/23"
   chapters:
+    - index.qmd
     - week1.qmd
     - week2.qmd
     - week3.qmd
