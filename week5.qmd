@@ -1,5 +1,5 @@
 ---
-title: "week5-GEE"
+title: "week6-GEE"
 ---
 
 ## Summary
@@ -36,7 +36,7 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 
 3.  Collections: Feature collections are compilations of Features that can be used to represent more complex data sets with spatial and attribute data. Image collections are stacks of raster images. Allows the user to load, manipulate and analyse multiple images as a cohesive data set.
 
-![Loading and displaying Landsat 9 satellite imagery using specific geographic locations (New Delhi), time frames (January and February 2020) and cloud coverage conditions (less than 10%)](images/新建 PPTX 演示文稿_页面_1.jpg){width="619"}
+![Loading and displaying Landsat 9 satellite imagery using specific geographic locations (New Delhi), time frames (January and February 2020) and cloud coverage conditions (less than 10%)](images/新建%20PPTX%20演示文稿_页面_1.jpg){width="619"}
 
 -   Reduce image data
 
@@ -46,7 +46,7 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 
 3.  Neighbourhood reduction, a method of relating each pixel to the surrounding area, analyses the window of pixels around the central pixel.
 
-![Cropping the region defined by Delhi, the three bands \['SR_B4', 'SR_B3', 'SR_B2'\] were selected for visualisation, corresponding to the red, green and blue bands, which produces images close to true colour.](images/新建 PPTX 演示文稿_页面_2.jpg){width="559"}
+![Cropping the region defined by Delhi, the three bands \['SR_B4', 'SR_B3', 'SR_B2'\] were selected for visualisation, corresponding to the red, green and blue bands, which produces images close to true colour.](images/新建%20PPTX%20演示文稿_页面_2.jpg){width="559"}
 
 -   Regression
 
@@ -62,21 +62,16 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 
 2.  Joins: implemented through in the filter. leftField refers to the index or attribute in the primary dataset; rightField refers to the corresponding attribute in the secondary dataset.
 
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Joining type  | Principle                                                                                                                                                   |
-+===============+=============================================================================================================================================================+
+|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Simple join   | Matches any record in the secondary set to the primary set.                                                                                                 |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Inverted join | Keep any records in the primary set that have no matches in the secondary set.                                                                              |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Internal join | Return all matching records between the two collections as a new element collection.                                                                        |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Spatial join  | The join attributes are stored in the attributes of the elements. Intersection operations can be performed and spatial subsetting of data is also possible. |
-+---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Summary of joining types
 
-![With regard to the analysis of power stations in the vicinity of protected areas, this includes the use of buffer zones (extending the buffer zone by 100 KM outside the boundaries of the protected area, adding the buffer zone to the map in red) and spatial connectivity (applying a spatial filter, filtering neighbouring elements by 100 kilometres distance, and saving the power stations that meet the criteria of the spatial filter to the attributes of the protected area feature).](images/新建 PPTX 演示文稿_页面_3.jpg){width="533"}
+![With regard to the analysis of power stations in the vicinity of protected areas, this includes the use of buffer zones (extending the buffer zone by 100 KM outside the boundaries of the protected area, adding the buffer zone to the map in red) and spatial connectivity (applying a spatial filter, filtering neighbouring elements by 100 kilometres distance, and saving the power stations that meet the criteria of the spatial filter to the attributes of the protected area feature).](images/新建%20PPTX%20演示文稿_页面_3.jpg){width="533"}
 
 ## Applications
 
@@ -86,16 +81,11 @@ Since this week is an introduction to the GEE platform, I'm going to explore why
 
 In traditional geographic information science (GIS) there are three main challenges([Yu & Gong 2012](https://doi.org/10.1080/01431161.2011.636081)):
 
-+-----+------------------------------------------------------------------+
-| No. | Challenge                                                        |
-+=====+==================================================================+
-| 1   | Three-dimensional global representation and                      |
-|     | visualisation of geospatial data                                 |
-+-----+------------------------------------------------------------------+
-| 2   | Pre-processing and mining of spatial big data                    |
-+-----+------------------------------------------------------------------+
-| 3   | Spatio-temporal techniques for studying geographic processes     |
-+-----+------------------------------------------------------------------+
+| No. | Challenge                                                                    |
+|-----|------------------------------------------------------------------------------|
+| 1   | Three-dimensional global representation and visualisation of geospatial data |
+| 2   | Pre-processing and mining of spatial big data                                |
+| 3   | Spatio-temporal techniques for studying geographic processes                 |
 
 : Three GIS challenges that GEE can address
 
@@ -135,7 +125,7 @@ Xiong, J. et al., 2017. Automated cropland mapping of continental Africa using G
 
 Yu, L. & Gong, P., 2012. Google Earth as a virtual globe tool for Earth science applications at the global scale: progress and perspectives, *International Journal of Remote Sensing*. Taylor & Francis, årg. 33, nr. 12, s. 3966--3986.
 
-Zhao, Q. et al., 2021. Progress and Trends in the Application of Google Earth and Google Earth Engine, *Remote Sensing*. Multidisciplinary Digital Publishing Institute, årg. 13, nr. 18, s. 3778. \
+Zhao, Q. et al., 2021. Progress and Trends in the Application of Google Earth and Google Earth Engine, *Remote Sensing*. Multidisciplinary Digital Publishing Institute, årg. 13, nr. 18, s. 3778.\
 \
 \
 \
