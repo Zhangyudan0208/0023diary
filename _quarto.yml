@@ -14,9 +14,6 @@ book:
     - week5.qmd
     - week7.qmd
     - week8.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
 
 bibliography: references.bib
 

@@ -30,7 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
 <link href="./week7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -152,24 +151,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8</span></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">References</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -183,6 +164,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
   <ul class="collapse">
   <li><a href="#advanced-classification-methods" id="toc-advanced-classification-methods" class="nav-link" data-scroll-target="#advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced Classification Methods</a></li>
+  <li><a href="#assessment-of-classification-accuracy" id="toc-assessment-of-classification-accuracy" class="nav-link" data-scroll-target="#assessment-of-classification-accuracy"><span class="header-section-number">7.1.2</span> Assessment of classification accuracy</a></li>
   </ul></li>
   <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
@@ -327,12 +309,12 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </tbody>
 </table>
-<ol start="3" type="1">
-<li>Assessment of classification accuracy</li>
-</ol>
-<ul>
+</section>
+<section id="assessment-of-classification-accuracy" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="assessment-of-classification-accuracy"><span class="header-section-number">7.1.2</span> Assessment of classification accuracy</h3>
+<ol type="1">
 <li>Confusion Matrix</li>
-</ul>
+</ol>
 <p>Confusion matrices are often used when performing accuracy assessments, being able to compare the classification results with an independent dataset of real ground conditions, providing a detailed view of the classification performance including: true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). And the accuracy values can be obtained through the confusion matrix.</p>
 <ul>
 <li>Classification of accuracy values</li>
@@ -366,12 +348,16 @@ ul.task-list li input[type="checkbox"] {
 </table>
 <p>In fact, application scenarios as well as requirements have to be considered when assessing the accuracy of classification models. For example, for land cover change detection, high overall accuracy may be most important. And for environmental monitoring, user accuracy may be more critical.</p>
 <p>Generally the Kappa coefficient can be used to assess the difference between classification accuracy and random classification accuracy, with higher values indicating better classification accuracy and greater likelihood of exceeding random classification. However, it has also been argued (<a href="https://www.sciencedirect.com/science/article/pii/S0034425719306509">Foody 2020</a>) that the Kappa coefficient does not directly reflect accuracy; it is simply a measure of classification consistency beyond the random level, and can indicate either consistency obtained by chance alone or almost perfect consistency, and the interpretation of its true significance is often ambiguous.</p>
-<ul>
+<ol start="2" type="1">
 <li>Validation data with cross-validation methods</li>
+</ol>
+<ul>
+<li>Leave-One-Out Cross-Validation</li>
 </ul>
-<p>Leave-One-Out Cross-Validation</p>
 <p>The number of folds is equal to the number of data points, and each iteration uses all but one data point for training and the missed points for testing. While maximising the amount of data used for training, the number of iterations is high and not practical for large datasets.</p>
-<p>Spatial cross-validation</p>
+<ul>
+<li>Spatial cross-validation</li>
+</ul>
 <p>Due to the first law of geography (observations close to each other are more likely to be similar), the method spatially partitions the data so that the training and validation sets are not geographically intersected to avoid due to spatial autocorrelation.</p>
 <table class="table">
 <caption>Characteristics of Spatial cross-validation</caption>
@@ -810,9 +796,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
