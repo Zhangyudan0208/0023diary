@@ -1,10 +1,10 @@
 ---
-title: "week2"
+title: "week2-NPP-VIIRS"
 ---
 
-## Xaringan Presentation - IKONOS-2
+## Xaringan Presentation - NPP-VIIRS
 
-The content for week 2 is a presentation in Xaringan on the Ikonos-2 satellite. The presentation is below, and the summary, application and reflection are all included in the slides.
+The content for week 2 is a presentation in Xaringan on the Visible Infrared Imaging Radiometer Suite satellite. The presentation is below, and the summary, application and reflection are all included in the slides.
 
 ```{r xaringan_embed, echo=FALSE}
 xaringanExtra::embed_xaringan(url = "https://zhangyudan0208.github.io/-xaringan/", ratio = "4:3")

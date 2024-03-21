@@ -9,6 +9,7 @@ book:
     - index.qmd
     - week1.qmd
     - week2.qmd
+    - week3.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
@@ -17,7 +18,9 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+        light: [cosmo, flatly]
+        dark: [cosmo, darkly]
   pdf:
     documentclass: scrreprt
 
