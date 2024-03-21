@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>diary - 3&nbsp; week3</title>
+<title>diary - 3&nbsp; week3-Remote sensing data pre-processing</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -76,7 +76,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3-Remote sensing data pre-processing</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -125,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3-Remote sensing data pre-processing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -172,7 +172,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3-Remote sensing data pre-processing</span></h1>
 </div>
 
 
@@ -348,12 +348,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>The counterpart to GIS merging in remote sensing is called tessellation. Feathering using a base image and other images is used to reduce the effect of seam lines.</p></li>
 <li><p>Feathering is different in different cases: usually based on representative samples and histogram matching algorithms it is possible to obtain similar luminance of two images for feathering</p></li>
-<li><p>Comparison between multiple images on the same area or when processing images at different times</p></li>
+<li><p>Comparison between multiple images on the same area or when processing images at different times</p>
+<p>Use normalisation and normalisation of Surface Reflectance (SR)</p>
+<p>Use Permanent Invariant Features (PIFs, Permanent Invariant Features) or other surface features that do not change over time to calibrate differences between multiple images.</p></li>
 </ul>
-<ol type="1">
-<li><p>Use normalisation and normalisation of Surface Reflectance (SR)</p></li>
-<li><p>Use Permanent Invariant Features (PIFs, Permanent Invariant Features) or other surface features that do not change over time to calibrate differences between multiple images.</p></li>
-<li><p>Data enhancement</p></li>
+<ol start="2" type="1">
+<li>Data enhancement</li>
 </ol>
 <p>In order to improve the visual appearance or outcome, images can have different enhancements applied to them：</p>
 <p>Sensors have a low band range in most of the images to avoid saturation, so methods like Minimum - Maximum, Percentage Linear and Standard Deviation, Piecewise Linear Contrast Stretch are used to add contrast.</p>
@@ -374,12 +374,38 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="applications" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">3.2</span> Applications</h2>
+<p>Since remote sensing products are often already calibrated during the application phase, this time I focused on investigating the issue of image enhancement applications in the classroom.</p>
+<ol type="1">
+<li>How image enhancement methods can help the urban environment?</li>
+</ol>
+<p>The computations such as image connectivity and enhancement learnt this week can be useful in real-world studies of urban environments. For example, in applications where edge enhancement of remotely sensed images is used to extract building footprints for monitoring natural disasters and urban development. The U-Net CNN architecture is one of the most basic networks in semantic segmentation, but such networks are not deep enough to detect detailed edge features.</p>
+<p>Hoin Jung et al.(<a href="https://ieeexplore.ieee.org/document/9527893">Jung, Choi &amp; Kang 2022</a>) used the edge features obtained by overall nested edge detection as inputs to their boundary enhancement module, where the two subunits of the module, detection boundary and segmentation mask, share information by combining probability graphs to represent the likelihood of the target object for boundary enhancement purposes. Compared with other semantic segmentation methods, the extracted architectural results of the proposed method in this study can have clear and subtle boundaries. In addition to extracting building information, the use of edge enhancement can also be used to obtain features of other features, such as the representation and extraction of spectral features of water bodies (<a href="https://www.webofscience.com/api/gateway?GWVersion=2&amp;SrcAuth=DOISource&amp;SrcApp=WOS&amp;KeyAID=10.18280%2Fts.400447&amp;DestApp=DOI&amp;SrcAppSID=EUW1ED0C09fJSwqdBo3Q68vI1VNCY&amp;SrcJTitle=TRAITEMENT+DU+SIGNAL&amp;DestDOIRegistrantName=International+Information+and+Engineering+Technology+Association">Zhang &amp; Lun 2023</a>), which can help monitor the urban water environment.</p>
+<ol start="2" type="1">
+<li>Does increasing the complexity of the images (or creating new datasets) help us achieve our goals?</li>
+</ol>
+<p>Contrast enhancement and filtering mainly improve or modify the visual quality or specific features of existing imagery, PCA and texture analysis may lead to the creation of new datasets and an increase in complexity.</p>
+<p>For example, texture is defined by calculating a statistical measure of pixel values within a local area of the image, thus increasing the image dataset for texture measures. Dekker et al.&nbsp;(<a href="https://www.webofscience.com/api/gateway?GWVersion=2&amp;SrcAuth=DynamicDOIConfProc&amp;SrcApp=WOS&amp;KeyAID=10.1109%2FDFUA.2001.985885&amp;DestApp=DOI&amp;SrcAppSID=EUW1ED0ED8dMRLpUQwxVkjkia2gPa&amp;SrcJTitle=IEEE%2FISPRS+JOINT+WORKSHOP+ON+REMOTE+SENSING+AND+DATA+FUSION+OVER+URBAN+AREAS&amp;DestDOIRegistrantName=Institute+of+Electrical+and+Electronics+Engineers">Dekker 2001</a>)investigated the map updating capabilities of ERS SAR imagery in urban areas using texture measures and found mean intensity, variance, skewness, weighted rank fill rate, semi-variance function (or wavelet energy measure), and gap metrics several texture measures are capable of providing the best land cover separability for the Rotterdam area. Overall, enhancement techniques can increase the information content of the images in different ways, to some extent placing new demands on the analysis and interpretation of the data, but also accomplishing the appropriate goals for the research questions.</p>
 </section>
 <section id="reflection" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">3.3</span> Reflection</h2>
+<p>Honestly speaking, due to the previous exposure to corrected remote sensing products, this is the first time to learn the principles of remote sensing correction systematically.</p>
+<p>As a matter of fact, correction procedures such as atmospheric correction and terrain correction are crucial for obtaining true information about the ground surface, just like in climate change research, failure to correctly correct for cloud cover or atmospheric effects may lead to misinterpretation of surface temperature and vegetation status. I believe that accurate image correction also ensures that decision makers can make more effective judgements in areas such as environmental monitoring, urban planning, and agricultural management.</p>
+<p>For example, in the field of public safety, corrected images can be used in disaster response and emergency relief (<a href="https://ieeexplore.ieee.org/document/7730747">Li et al.&nbsp;2016</a>) for real-time disaster monitoring. I believe that in the future, we can continue to extend image correction skills to different remote sensing platforms, such as UAVs or near-Earth observation, and thus improve the real-time and accuracy of disaster monitoring, which is very much in demand.</p>
+<p>As mentioned in the application case, enhancement techniques such as PCA or filtering can be used to extract specific environmental features, which is very important in applied research in geological exploration, biodiversity. I also believe that integrating datasets of different formats, resolutions, and times is very necessary in practical research, because our research often requires the integration of a collection of remote sensing data from multiple sources as well as long time series in order to make the research more meaningful. Therefore, I found the data preprocessing and quality control methods learned in this literature to be very beneficial. In future research, I believe that integration with datasets from other disciplines (e.g.&nbsp;socio-economics, ecology) is necessary, which is the key to applying remote sensing to a wider range of real-world problems, and I have learnt that methods of augmenting datasets are constantly being updated, and I hope that I will be able to learn more advanced algorithms and models to deal with more complex datasets in the future, such as the use of machine learning techniques to automatically identify and classify surface features.</p>
 </section>
 <section id="references" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="references"><span class="header-section-number">3.4</span> References</h2>
+<p>Chen, J. et al., 2020. A Novel Infrared Image Enhancement Based on Correlation Measurement of Visible Image for Urban Traffic Surveillance Systems, <em>Journal of Intelligent Transportation Systems</em>. Taylor &amp; Francis, årg. 24, nr. 3, s. 290–303.<br>
+</p>
+<p>Dekker, R.J., 2001. <em>Texture analysis of urban areas in ERS SAR imagery for map updating</em> [Online]. New York: IEEE.<br>
+</p>
+<p>Jung, H., Choi, H.-S. &amp; Kang, M., 2022. Boundary Enhancement Semantic Segmentation for Building Extraction From Remote Sensed Image, <em>IEEE Transactions on Geoscience and Remote Sensing</em>, årg. 60, s. 1–12.<br>
+</p>
+<p>Lee, K.-H. &amp; Yum, J.-M., 2019. A Review on Atmospheric Correction Technique Using Satellite Remote Sensing, <em>Korean Journal of Remote Sensing</em>. The Korean Society of Remote Sensing, årg. 35, nr. 6_1, s. 1011–1030.<br>
+</p>
+<p>Li, Y. et al., 2016. <em>Geometric correction algorithm of UAV remote sensing image for the emergency disaster</em> [Online].<br>
+</p>
+<p>Zhang, Y. &amp; Lun, H., 2023. Remote Sensing and Image Processing Techniques for Water Environment Monitoring: A Case Study of the Beijing-Tianjin-Hebei Region, <em>TRAITEMENT DU SIGNAL</em>. Edmonton: Int Information &amp; Engineering Technology Assoc, årg. 40, nr. 4, s. 1771–1779.</p>
 
 
 </section>

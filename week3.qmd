@@ -1,5 +1,5 @@
 ---
-title: "week3"
+title: "week3-Remote sensing data pre-processing"
 ---
 
 ## Summary
@@ -22,17 +22,17 @@ The week began with a study of the different correction methods and their princi
 
 : Main steps of geometric correction
 
-+--------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| No.    | limitations                                      | Definition                                                                                                                                                                                                                                                                                      |
-+========+==================================================+=================================================================================================================================================================================================================================================================================================+
-| 1      | Dependence on high-quality ground control points | If these points are not of high quality (e.g., inaccurate positioning), this may lead to inaccurate results in the calibration process.                                                                                                                                                         |
-+--------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 2      | Loss of data quality due to resampling           | some data quality may be lost due to interpolation during the resampling process. For example, nearest neighbour interpolation may lead to pixelation effects, and linear and cubic interpolation may introduce data smoothing.                                                                 |
-+--------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 3      | Affected by environmental conditions             | In complex or rapidly changing terrain (e.g., mountains or canyons), it may be difficult to obtain accurate geometric corrections, even when using GCPs. If the environment is rapidly changing, the final image may not accurately reflect current conditions, even with geometric correction. |
-+--------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| 4      | Higher cost                                      | A large amount of manual input is required in selecting and validating GCPs. Being a computationally intensive process increases the overall resource and time requirements of the project.                                                                                                     |
-+--------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++---------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| No.     | limitations                                      | Definition                                                                                                                                                                                                                                                                                      |
++=========+==================================================+=================================================================================================================================================================================================================================================================================================+
+| 1       | Dependence on high-quality ground control points | If these points are not of high quality (e.g., inaccurate positioning), this may lead to inaccurate results in the calibration process.                                                                                                                                                         |
++---------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 2       | Loss of data quality due to resampling           | some data quality may be lost due to interpolation during the resampling process. For example, nearest neighbour interpolation may lead to pixelation effects, and linear and cubic interpolation may introduce data smoothing.                                                                 |
++---------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 3       | Affected by environmental conditions             | In complex or rapidly changing terrain (e.g., mountains or canyons), it may be difficult to obtain accurate geometric corrections, even when using GCPs. If the environment is rapidly changing, the final image may not accurately reflect current conditions, even with geometric correction. |
++---------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 4       | Higher cost                                      | A large amount of manual input is required in selecting and validating GCPs. Being a computationally intensive process increases the overall resource and time requirements of the project.                                                                                                     |
++---------+--------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 : Geometric correction limitations
 
@@ -82,11 +82,11 @@ The week began with a study of the different correction methods and their princi
 
 -   Comparison between multiple images on the same area or when processing images at different times
 
-1.  Use normalisation and normalisation of Surface Reflectance (SR)
+    Use normalisation and normalisation of Surface Reflectance (SR)
 
-2.  Use Permanent Invariant Features (PIFs, Permanent Invariant Features) or other surface features that do not change over time to calibrate differences between multiple images.
+    Use Permanent Invariant Features (PIFs, Permanent Invariant Features) or other surface features that do not change over time to calibrate differences between multiple images.
 
-3.  Data enhancement
+2.  Data enhancement
 
 In order to improve the visual appearance or outcome, images can have different enhancements applied to them：
 
@@ -100,6 +100,40 @@ There are also different ways to improve the image such as Ratio, Filtering, Pri
 
 ## Applications
 
+Since remote sensing products are often already calibrated during the application phase, this time I focused on investigating the issue of image enhancement applications in the classroom.
+
+1.  How image enhancement methods can help the urban environment?
+
+The computations such as image connectivity and enhancement learnt this week can be useful in real-world studies of urban environments. For example, in applications where edge enhancement of remotely sensed images is used to extract building footprints for monitoring natural disasters and urban development. The U-Net CNN architecture is one of the most basic networks in semantic segmentation, but such networks are not deep enough to detect detailed edge features.
+
+Hoin Jung et al.([Jung, Choi & Kang 2022](https://ieeexplore.ieee.org/document/9527893)) used the edge features obtained by overall nested edge detection as inputs to their boundary enhancement module, where the two subunits of the module, detection boundary and segmentation mask, share information by combining probability graphs to represent the likelihood of the target object for boundary enhancement purposes. Compared with other semantic segmentation methods, the extracted architectural results of the proposed method in this study can have clear and subtle boundaries. In addition to extracting building information, the use of edge enhancement can also be used to obtain features of other features, such as the representation and extraction of spectral features of water bodies ([Zhang & Lun 2023](https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=WOS&KeyAID=10.18280%2Fts.400447&DestApp=DOI&SrcAppSID=EUW1ED0C09fJSwqdBo3Q68vI1VNCY&SrcJTitle=TRAITEMENT+DU+SIGNAL&DestDOIRegistrantName=International+Information+and+Engineering+Technology+Association)), which can help monitor the urban water environment.
+
+2.   Does increasing the complexity of the images (or creating new datasets) help us achieve our goals?
+
+Contrast enhancement and filtering mainly improve or modify the visual quality or specific features of existing imagery, PCA and texture analysis may lead to the creation of new datasets and an increase in complexity.
+
+For example, texture is defined by calculating a statistical measure of pixel values within a local area of the image, thus increasing the image dataset for texture measures. Dekker et al. ([Dekker 2001](https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DynamicDOIConfProc&SrcApp=WOS&KeyAID=10.1109%2FDFUA.2001.985885&DestApp=DOI&SrcAppSID=EUW1ED0ED8dMRLpUQwxVkjkia2gPa&SrcJTitle=IEEE%2FISPRS+JOINT+WORKSHOP+ON+REMOTE+SENSING+AND+DATA+FUSION+OVER+URBAN+AREAS&DestDOIRegistrantName=Institute+of+Electrical+and+Electronics+Engineers))investigated the map updating capabilities of ERS SAR imagery in urban areas using texture measures and found mean intensity, variance, skewness, weighted rank fill rate, semi-variance function (or wavelet energy measure), and gap metrics several texture measures are capable of providing the best land cover separability for the Rotterdam area. Overall, enhancement techniques can increase the information content of the images in different ways, to some extent placing new demands on the analysis and interpretation of the data, but also accomplishing the appropriate goals for the research questions.
+
 ## Reflection
 
+Honestly speaking, due to the previous exposure to corrected remote sensing products, this is the first time to learn the principles of remote sensing correction systematically.
+
+As a matter of fact, correction procedures such as atmospheric correction and terrain correction are crucial for obtaining true information about the ground surface, just like in climate change research, failure to correctly correct for cloud cover or atmospheric effects may lead to misinterpretation of surface temperature and vegetation status. I believe that accurate image correction also ensures that decision makers can make more effective judgements in areas such as environmental monitoring, urban planning, and agricultural management.
+
+For example, in the field of public safety, corrected images can be used in disaster response and emergency relief ([Li et al. 2016](https://ieeexplore.ieee.org/document/7730747)) for real-time disaster monitoring. I believe that in the future, we can continue to extend image correction skills to different remote sensing platforms, such as UAVs or near-Earth observation, and thus improve the real-time and accuracy of disaster monitoring, which is very much in demand.
+
+As mentioned in the application case, enhancement techniques such as PCA or filtering can be used to extract specific environmental features, which is very important in applied research in geological exploration, biodiversity. I also believe that integrating datasets of different formats, resolutions, and times is very necessary in practical research, because our research often requires the integration of a collection of remote sensing data from multiple sources as well as long time series in order to make the research more meaningful. Therefore, I found the data preprocessing and quality control methods learned in this literature to be very beneficial. In future research, I believe that integration with datasets from other disciplines (e.g. socio-economics, ecology) is necessary, which is the key to applying remote sensing to a wider range of real-world problems, and I have learnt that methods of augmenting datasets are constantly being updated, and I hope that I will be able to learn more advanced algorithms and models to deal with more complex datasets in the future, such as the use of machine learning techniques to automatically identify and classify surface features.
+
 ## References
+
+Chen, J. et al., 2020. A Novel Infrared Image Enhancement Based on Correlation Measurement of Visible Image for Urban Traffic Surveillance Systems, *Journal of Intelligent Transportation Systems*. Taylor & Francis, årg. 24, nr. 3, s. 290--303.\
+
+Dekker, R.J., 2001. *Texture analysis of urban areas in ERS SAR imagery for map updating* \[Online\]. New York: IEEE.\
+
+Jung, H., Choi, H.-S. & Kang, M., 2022. Boundary Enhancement Semantic Segmentation for Building Extraction From Remote Sensed Image, *IEEE Transactions on Geoscience and Remote Sensing*, årg. 60, s. 1--12.\
+
+Lee, K.-H. & Yum, J.-M., 2019. A Review on Atmospheric Correction Technique Using Satellite Remote Sensing, *Korean Journal of Remote Sensing*. The Korean Society of Remote Sensing, årg. 35, nr. 6_1, s. 1011--1030.\
+
+Li, Y. et al., 2016. *Geometric correction algorithm of UAV remote sensing image for the emergency disaster* \[Online\].\
+
+Zhang, Y. & Lun, H., 2023. Remote Sensing and Image Processing Techniques for Water Environment Monitoring: A Case Study of the Beijing-Tianjin-Hebei Region, *TRAITEMENT DU SIGNAL*. Edmonton: Int Information & Engineering Technology Assoc, årg. 40, nr. 4, s. 1771--1779.
