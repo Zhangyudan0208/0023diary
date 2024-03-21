@@ -1,5 +1,5 @@
 ---
-title: "An Introduction to Remote Sensing"
+title: "Week1-Introduction"
 ---
 
 ## Summary
@@ -9,7 +9,7 @@ title: "An Introduction to Remote Sensing"
 The content of this chapter focuses on the working principles of active and passive remote sensing.
 
 |                  | Passive                                                                                                                      | Active                                                                    |
-|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+|---------------|-------------------------------------|---------------------|
 | Energy use       | Use existing energy, do not emit anything                                                                                    | Has an illuminated energy source                                          |
 | Detection method | Detects energy reflected from the sun, receives electromagnetic radiation emitted or reflected by the observed object itself | Actively emits electronically mediated waves and then waits for reception |
 | Examples         | Human eyes, cameras, satellite sensors                                                                                       | Radar, x-ray, lidar                                                       |
@@ -19,7 +19,7 @@ The content of this chapter focuses on the working principles of active and pass
 Based on respective characteristics, we are able to summarize the benefits and limitations of each of the two types of remote sensing.
 
 | Benefits                                                                                                                                    | Limitations                                                                                          |
-|---------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+|------------------------------------------|------------------------------|
 | 1\. Unaffected by sunlight and able to observe both day and night.                                                                          | 1\. Reflected signals may be interfered with by other objects in nature or by electromagnetic noise. |
 | 2\. More sensors, need to adjust the wavelength of emission, able to measure height, terrain, wind, etc.                                    | 2\. Requires its own energy to transmit signals, limiting its use in drones or satellite platforms.  |
 | 3\. Have penetration capabilities such as SAR to penetrate clouds and vegetation to obtain information on surface or subsurface structures. |                                                                                                      |
@@ -27,7 +27,7 @@ Based on respective characteristics, we are able to summarize the benefits and l
 : Table 2. Comparison of advantages and disadvantages of active remote sensing
 
 | Benefits                                                                                                                                                                | Limitations                                                                                                                                                                                                                                                             |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------------------------|--------------------------------------------|
 | 1\. Low energy consumption, requiring less energy, long mission times, low manufacturing and operating costs, and can be easily deployed and utilized on a large scale. | 1\. Dependent on lighting conditions, performance is limited under poor ambient light conditions. The spectral range is also dependent on the spectral properties of the natural light source, resulting in limitations in observing certain specific wavelength bands. |
 | 2\. Capable of capturing a wide range of spectral information using sunlight, it is suitable for multiple scenarios                                                     | 2\. The received irradiance is mainly off-water irradiance, which can only be observed in specific atmospheric windows, and signals in other bands will be absorbed and masked. Susceptible to atmospheric components.                                                  |
 
@@ -64,7 +64,7 @@ Atmospheric interactions
 We explored 4 resolutions for remotely sensed data
 
 | Resolution type | Characteristic explanation                                                                                                                                                                                                                                              |
-|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|------------|------------------------------------------------------------|
 | Spectral        | Obtaining values for each wavelength (or band of multiple wavelengths) in the electromagnetic spectrum to create spectral features, which may be discrete (multispectral) or continuous (hyperspectral)                                                                 |
 | Spatial         | In most cases, remotely sensed data are rasters. Spatial resolution refers to the size of the raster image element                                                                                                                                                      |
 | Temporal        | Temporal resolution relates to how frequently surface data are updated, the time interval between revisits to the same location by a remote sensing sensor                                                                                                              |
