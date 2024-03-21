@@ -2,8 +2,8 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "diary"
-  author: "Norah Jones"
+  title: "Learning diary CASA0023"
+  author: "Yudan Zhang"
   date: "2024/1/23"
   chapters:
     - index.qmd
@@ -14,6 +14,7 @@ book:
     - week5.qmd
     - week7.qmd
     - week8.qmd
+    - week9.qmd
 
 bibliography: references.bib
 

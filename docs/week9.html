@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning diary CASA0023 - 7&nbsp; week8-Classification II</title>
+<title>Learning diary CASA0023 - 8&nbsp; week9-SAR</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./week9.html" rel="next">
-<link href="./week7.html" rel="prev">
+<link href="./week8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -76,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week9-SAR</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -148,13 +147,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week8.html" class="sidebar-item-text sidebar-link active">
+  <a href="./week8.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./week9.html" class="sidebar-item-text sidebar-link">
+  <a href="./week9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week9-SAR</span></span></a>
   </div>
 </li>
@@ -168,14 +167,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">7.1</span> Summary</a>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">8.1</span> Summary</a>
   <ul class="collapse">
-  <li><a href="#advanced-classification-methods" id="toc-advanced-classification-methods" class="nav-link" data-scroll-target="#advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced Classification Methods</a></li>
-  <li><a href="#assessment-of-classification-accuracy" id="toc-assessment-of-classification-accuracy" class="nav-link" data-scroll-target="#assessment-of-classification-accuracy"><span class="header-section-number">7.1.2</span> Assessment of classification accuracy</a></li>
+  <li><a href="#features-and-benefits" id="toc-features-and-benefits" class="nav-link" data-scroll-target="#features-and-benefits"><span class="header-section-number">8.1.1</span> Features and Benefits</a></li>
+  <li><a href="#working-principle" id="toc-working-principle" class="nav-link" data-scroll-target="#working-principle"><span class="header-section-number">8.1.2</span> Working Principle</a></li>
+  <li><a href="#processing-flow" id="toc-processing-flow" class="nav-link" data-scroll-target="#processing-flow"><span class="header-section-number">8.1.3</span> Processing flow</a></li>
   </ul></li>
-  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">7.2</span> Applications</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.3</span> Reflection</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.4</span> References</a></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">8.2</span> Applications</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">8.3</span> Reflection</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">8.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week9-SAR</span></h1>
 </div>
 
 
@@ -199,250 +199,164 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="summary" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">7.1</span> Summary</h2>
-<section id="advanced-classification-methods" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="advanced-classification-methods"><span class="header-section-number">7.1.1</span> Advanced Classification Methods</h3>
-<p>We have continued to learn about land cover classification methods and also learnt to cope with different data, compared to what we learnt last week, this week is mainly about how to deal with different objects.</p>
-<ol type="1">
-<li>Object-Based Image Analysis (OBIA)</li>
-</ol>
-<p>OBIA is based on the geometrical and spectral properties of objects in an image for analysis and classification.</p>
-<p>The main principle of the method is related to hyperpixels. It aggregates neighbouring image elements with similar properties into hyperpixels, which are used to represent the actual objects on the ground. The hyperpixels are in turn generated by the Simple Linear Iterative Clustering algorithm. This algorithm calculates spatial distances and colour differences among regular points on the image, which can determine which image elements should be combined into a single hyperpixel, typically after 4-10 iterations, to better reflect the shape and size of the target object.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/8.1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">After pre-processing and feature extraction with spectral gradient and K-means clustering, simple non-iterative clustering and calculation of NDVI, super-pixel segmentation, training of CART using training data, classification of multi-band images (I think further optimisation is needed for image segmentation of classification objects)</figcaption>
-</figure>
-</div>
-<ul>
-<li>Advantages:</li>
-</ul>
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<p>This week is about learning about a specific remote sensing product and its application, Synthetic Aperture Radar (SAR), which is an active remote sensing technique that uses radar to create two-dimensional images or three-dimensional reconstructions of objects. It has several characteristics:</p>
+<section id="features-and-benefits" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="features-and-benefits"><span class="header-section-number">8.1.1</span> Features and Benefits</h3>
 <table class="table">
+<caption>SAR features and benefits</caption>
 <colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>1.</td>
-<td>Can more accurately represent the actual objects on the ground such as buildings, more accurate classification results</td>
-</tr>
-<tr class="even">
-<td>2.</td>
-<td>Has a variety of classifiers and software packages that can use different algorithms to provide more complex analyses and functions, such as Supercells package can use any distance measure</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Limitations:</li>
-</ul>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>1.</td>
-<td>Does not take into account the connectivity between superpixels, which may lead to very small and difficult to interpret classification regions</td>
-</tr>
-<tr class="even">
-<td>2.</td>
-<td>using the Euclidean distance metric limits the suitable data types and classification needs.</td>
-</tr>
-<tr class="odd">
-<td>3.</td>
-<td>Performed in LAB colour space, which requires conversion of the raw data, affecting the accuracy of the classification.</td>
-</tr>
-</tbody>
-</table>
-<ol start="2" type="1">
-<li>Subpixel analysis</li>
-</ol>
-<p>This method is mainly used when a single pixel contains multiple land cover types and is also called spectral mixture analysis (SMA). Rather than assigning an entire pixel to one dominant land cover class, it estimates the proportion of each land cover type in the pixel.</p>
-<p>The basic principle is that the reflectance captured by a pixel is a combination of the reflectance of all land cover types (endmembers) within that pixel. By using the purely spectral characteristics of these endmembers, the analysis attempts to reverse derive the proportion of each endmembers contribution to the observed pixel value.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/8.2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Using Dar-es-salaam as the study area, the sub-pixel analysis was completed by using Landsat 8 with dynamic end-element extraction, calculating the average spectral value of the delineated area, and calculating the percentage of each pixel in the image for each end-element type.</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/8.3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The subpixel images were enhanced and classified for each pixel with the largest percentage of land cover (e.g., 50% or more). Reducing the subpixel results to a single classification prepares the way for later use of traditional error matrix methods to assess classification accuracy.</figcaption>
-</figure>
-</div>
-<ul>
-<li>Advantages:</li>
-</ul>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>1.</td>
-<td>Provides a more detailed understanding of land cover by disaggregating the components within a pixel, further effectively improving the resolution of land cover information compared to full pixel classification</td>
-</tr>
-<tr class="even">
-<td>2.</td>
-<td>better capture minor changes in the landscape as the land is monitored over time</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>Limitations:</li>
-</ul>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 93%">
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>1.</td>
-<td>Computationally complex, the more end-elements considered the more computationally intensive</td>
-</tr>
-<tr class="even">
-<td>2.</td>
-<td>Accuracy depends on the purity of the end elements. Impure spectral features can lead to unreliable results</td>
-</tr>
-<tr class="odd">
-<td>3.</td>
-<td>Analyses are limited by spectral library data, so comprehensive spectral libraries are needed as much as possible</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="assessment-of-classification-accuracy" class="level3" data-number="7.1.2">
-<h3 data-number="7.1.2" class="anchored" data-anchor-id="assessment-of-classification-accuracy"><span class="header-section-number">7.1.2</span> Assessment of classification accuracy</h3>
-<ol type="1">
-<li>Confusion Matrix</li>
-</ol>
-<p>Confusion matrices are often used when performing accuracy assessments, being able to compare the classification results with an independent dataset of real ground conditions, providing a detailed view of the classification performance including: true positives (TP), false positives (FP), true negatives (TN) and false negatives (FN). And the accuracy values can be obtained through the confusion matrix.</p>
-<ul>
-<li>Classification of accuracy values</li>
-</ul>
-<table class="table">
-<caption>Table of accuracy value type</caption>
-<colgroup>
-<col style="width: 13%">
-<col style="width: 86%">
+<col style="width: 26%">
+<col style="width: 73%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Accuracy value</th>
+<th>Feature and benefit</th>
 <th>Definition</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Producer’s accuracy</td>
-<td>A measure of accuracy from the producer’s perspective. Indicates the ratio of pixels that are correctly classified to all relevant pixels in that category (i.e., the sum of true positives and false negatives)</td>
+<td>Active Sensor</td>
+<td>Unlike passive sensors that rely on sunlight, the SAR comes with its own light source. Images can be acquired at any time or season</td>
 </tr>
 <tr class="even">
-<td>User accuracy</td>
-<td>Measures the ratio of correctly classified pixels to all pixels classified as that category (i.e., the sum of true positives and false positives). User accuracy is concerned with whether a pixel classified as a category actually belongs to that category</td>
+<td>Surface texture data</td>
+<td>Thanks to its high-resolution capabilities, SAR can detect fine details about the surface texture</td>
 </tr>
 <tr class="odd">
-<td>Overall Accuracy</td>
-<td>Indicates the proportion of correctly classified pixels across all categories and reflects the overall performance of the classification model</td>
+<td>Cloud penetration</td>
+<td>SAR can penetrate weather and clouds because radar wavelengths can penetrate atmospheric conditions that block optical sensors</td>
+</tr>
+<tr class="even">
+<td>Wavelength Variation</td>
+<td>Different wavelengths (L, C, S, X, Ku, K and Ka bands) are used for various applications. The wavelength determines the depth of penetration and resolution of the image</td>
 </tr>
 </tbody>
 </table>
-<p>In fact, application scenarios as well as requirements have to be considered when assessing the accuracy of classification models. For example, for land cover change detection, high overall accuracy may be most important. And for environmental monitoring, user accuracy may be more critical.</p>
-<p>Generally the Kappa coefficient can be used to assess the difference between classification accuracy and random classification accuracy, with higher values indicating better classification accuracy and greater likelihood of exceeding random classification. However, it has also been argued (<a href="https://www.sciencedirect.com/science/article/pii/S0034425719306509">Foody 2020</a>) that the Kappa coefficient does not directly reflect accuracy; it is simply a measure of classification consistency beyond the random level, and can indicate either consistency obtained by chance alone or almost perfect consistency, and the interpretation of its true significance is often ambiguous.</p>
-<ol start="2" type="1">
-<li>Validation data with cross-validation methods</li>
-</ol>
-<ul>
-<li>Leave-One-Out Cross-Validation</li>
-</ul>
-<p>The number of folds is equal to the number of data points, and each iteration uses all but one data point for training and the missed points for testing. While maximising the amount of data used for training, the number of iterations is high and not practical for large datasets.</p>
-<ul>
-<li>Spatial cross-validation</li>
-</ul>
-<p>Due to the first law of geography (observations close to each other are more likely to be similar), the method spatially partitions the data so that the training and validation sets are not geographically intersected to avoid due to spatial autocorrelation.</p>
+</section>
+<section id="working-principle" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="working-principle"><span class="header-section-number">8.1.2</span> Working Principle</h3>
+<p>Due to the special way in which SAR transmits and acquires radar signals, it has specialised terminology, which belongs to and reflects the principles of its operation:</p>
 <table class="table">
-<caption>Characteristics of Spatial cross-validation</caption>
-<colgroup>
-<col style="width: 22%">
-<col style="width: 77%">
-</colgroup>
+<caption>SAR terms and interpretation</caption>
 <thead>
 <tr class="header">
-<th>Characteristic</th>
-<th>Definition</th>
+<th>Term</th>
+<th>Interpretation</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>1. Advantage</td>
-<td>in reducing the risk of overfitting the model to spatially similar data</td>
+<td>Backscatter(Amplitude)</td>
+<td>This refers to the strength of the signal reflected back to the radar antenna from the surface, and can provide information about the characteristics of the ground being illuminated, such as surface roughness, humidity and vegetation type. It is directly related to the surface characteristics and also to the polarisation state of the radar wave.</td>
 </tr>
 <tr class="even">
-<td>2. Requirement</td>
-<td>Sufficient data distribution is needed to create meaningful spatial partitions</td>
+<td>Polarization</td>
+<td>The direction of electromagnetic wave vibration when radar waves are transmitted and received. Radar systems can transmit and receive waves with different polarisations, which is called polarisation diversity (<a href="http://ieeexplore.ieee.org/document/6024249/">Ruan et al.&nbsp;2011</a>). Polarisation can directly affect backscatter, the amplitude of backscatter is affected by the scattering mechanism, and different surface types (water, bare soil, vegetation) respond differently to radar waves of different polarisation states. Also the information richness of backward scattering can vary depending on the polarisation used.</td>
 </tr>
 <tr class="odd">
-<td>3. Optimisation</td>
-<td>the hyperparameters of the SVM classifier need to be tuned to balance the model complexity and generalisation capabilities</td>
+<td>Dielectric constant</td>
+<td>A measure of the ability of a substance to transmit electricity without conduction. It affects how radar signals are scattered and so is also directly related to Backscatter.</td>
 </tr>
 <tr class="even">
-<td>4. Multiple iterations</td>
-<td>Multiple rounds of spatial partitioning and validation are required to ensure robustness</td>
+<td>Phase</td>
+<td>Refers to the position of a wave in its cycle as it returns to the sensor and is critical to interferometry (<a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/3545/0000/SAR-interferometry-phase-unwrapping-by-fringe-line-detection/10.1117/12.323636.full">Zhang et al.&nbsp;1998</a>).</td>
 </tr>
 </tbody>
 </table>
 </section>
+<section id="processing-flow" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="processing-flow"><span class="header-section-number">8.1.3</span> Processing flow</h3>
+<p>After learning the basic principles and terminology of SAR, we step by step understand the basic process of processing SAR data:</p>
+<table class="table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 81%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Step</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Determine the I and Q values</td>
+<td>Contains the real part (I) and imaginary part (Q), which represents the In-phase (In-phase) and Quadrature (Quadrature) pairs, used to characterise the complex form of the received electromagnetic wave.</td>
+</tr>
+<tr class="even">
+<td>Generation of visual image (amplitude)</td>
+<td>Ground Range Detected (GRD) is used. In Google Earth Engine (GEE), this is achieved by squaring and root-checking the I and Q values of the Single Look Complex (SLC) to calculate the reflected intensity (backscatter).</td>
+</tr>
+<tr class="odd">
+<td>Storage of values</td>
+<td>Backscatter values can be stored as power, amplitude or decibels (dB). These are suitable for statistical analysis, visualisation and identification of differences in dark areas (e.g.&nbsp;water bodies) respectively.</td>
+</tr>
+<tr class="even">
+<td>Averaging of multiple images</td>
+<td>Noise in SAR images is caused by uneven scattering and can be smoothed by averaging multiple images.</td>
+</tr>
+</tbody>
+</table>
+<p>In practice, processing SAR data for change detection takes into account both the statistical and noise properties of the images. It is often necessary to collect data at multiple time points and use statistical methods to assess the significance of changes (e.g.&nbsp;the standard distribution may only apply to the difference image and not the original image (<a href="https://www.taylorfrancis.com/books/mono/10.1201/9780429464348/image-analysis-classification-change-detection-remote-sensing-morton-john-canty">Canty 2019</a>)). It is also necessary to use classification thresholds to optimise the accuracy of change detection and to validate the results with ROC curves. In some cases, image fusion techniques such as combining the intensity of the SAR data with the hue and saturation of the optical image (classified as decision-level fusion, object-level fusion, and image fusion depending on the layer used and the object generated) will also be utilised to improve the visualisation of change detection.</p>
 </section>
-<section id="applications" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">7.2</span> Applications</h2>
-<p>In conjunction with this week’s classification method, I have taken a look at its position in the development of remote sensing applications.</p>
-<p>Land use information has been extracted in different ways at different times in the development of remote sensing technology. In the early days, images captured by remote sensing sensors had larger pixels than ground features at low and medium resolution, so subpixel analysis was needed to respond to land class features(<a href="https://www.sciencedirect.com/science/article/pii/S0924271609000884">Blaschke 2010</a>). However, in the gradual increase of high-resolution imagery applications, the pixel-based analysis method is not able to respond to the spatial variations of land cover, so object-based image analysis becomes an effective method in high spatial resolution imagery applications. Due to its spectral, spatial, textural, and topological characteristics, and its ability to respond to geographic information, there has been a gradual increase in the number of studies and techniques related to geographic object-based image analysis (GEOBIA) (<a href="https://www.cambridge.org/core/journals/polar-record/article/remote-sensing-digital-image-processing-in-remote-sensing-jp-muller-editor-1988-london-taylor-and-francis-275-p-illustrated-hard-cover-isbn-0850663148-3800-us8400/7CCF3D9EED97C78CE8C6AB431647C513">Rees 1989</a>).</p>
-<p>Manne et al.&nbsp;(<a href="Object based Classification of Multispectral Remote Sensing Images for Forestry Applications">Suneetha et al.&nbsp;2020</a>) used object-based image analysis with three separate stages of segmentation, generation of training data and final classification to obtain the range of forestry based on remote sensing satellite images such as Deimos-2 and Cartosat-1. As learnt in the course. The measurement of the classification results was determined from four main aspects, namely, Producers Accuracy, Users Accuracy, Overall Accuracy and Kappa coefficient value. Although the accuracy value of the data in Cartosat-1 is low and the interpretation of the Kappa coefficient is debatable. However, it can show the usefulness of the method for multispectral image classification and can support the real needs such as ecological monitoring.</p>
+</section>
+<section id="applications" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">8.2</span> Applications</h2>
+<p>This course demonstrates the benefits of SAR data, reflecting a wide range of potential application scenarios. However, it is a fact that SAR images are poor in target identification and band information (<a href="https://www.mdpi.com/2072-4292/14/16/4022">Li et al.&nbsp;2022</a>). Therefore, researchers usually fuse SAR images with other remote sensing images for better visual performance and additional valuable information, which are mainly divided into: 1. fusion between SAR images; 2. fusion with optical images; 3. and also fusion with other data.</p>
+<p>Fusion between SAR images can obtain more band and polarisation information (<a href="https://ieeexplore.ieee.org/document/9729100/">Zhang et al.&nbsp;2022</a>). Li et al.&nbsp;(<a href="https://www.mdpi.com/2072-4292/14/16/4022">Li et al.&nbsp;2022</a>) used the non-subsampled shear transform (NSST) to fuse the decomposed subband images through the coefficient of variation and phase consistency weighted fusion rules, and proceeded to the fused images based on the extracted band and polarisation information, which was found to retain more valuable information as well as being easy to interpret. This study also highlights the NSST method with PCA fusion and wavelet fusion and other fusion methods mentioned in the classroom image fusion methods that can visualise the differences between the different methods.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Classified map of Deimos-2 using OBIA technique with radius 5.png" class="img-fluid figure-img" width="532"></p>
-<figcaption class="figure-caption">Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
+<p><img src="images/remotesensing-14-04022-g005.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Comparison of representative regions and their integration results (<a href="https://www.mdpi.com/2072-4292/14/16/4022">Li et al.&nbsp;2022</a>)</figcaption>
 </figure>
 </div>
+<p>Since the imaging modes of SAR and optical images are different, Chu et al.&nbsp;(<a href="https://doi.org/10.1080/01431161.2020.1723175">Chu et al.&nbsp;2020</a>) also used NSST and an improved SAR optical image fusion algorithm to avoid the usual problems of spectral distortion and excessive noise introduction in the fused image, and smoothly integrate the SAR image into the optical image. In fact, the application of SAR and optical images is more practical and can be widely used in diverse fields such as urban built-up area research (<a href="https://doi.org/10.1080/15481603.2015.1116140">Teimouri, Mokhtarzade &amp; Valadan Zoej 2016</a>), agricultural cultivation research (<a href="https://www.sciencedirect.com/science/article/pii/S2095311918620167">Liu et al.&nbsp;2019</a>), glacier ecological monitoring (<a href="https://doi.org/10.1007/s12524-019-01040-3">Shah, Jayaprasad &amp; James 2019</a>), and so on.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/Accuracy assessment of OBIA.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
+<p><img src="images/tres_a_1723175_f0007_c.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Novel fusion method for SAR and optical images based on non-subsampled shearlet transform (<a href="https://doi.org/10.1080/01431161.2020.1723175">Chu et al.&nbsp;2020</a>)</figcaption>
 </figure>
 </div>
-<p>Hossain et al.&nbsp;(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>) summarised the research trends in image analysis based on geographic objects, and were able to find that the ability to match objects segmented from images with meaningful geographic objects is the key challenge in this field, and we can intuitively see that the cases and tools for this classification technique are improving significantly, so I also believe that continuous improvement of image segmentation techniques is also the future direction of research.</p>
+<p>In class the instructor also showed a case study combining SAR data with statistical data (<a href="https://oballinger.github.io/PWTT/blast.html#change-detection">Open Access Damage Detection Using Sentinel-1 Imagery</a>). The project utilised a combination of statistical tests such as SAR and ground truth data, using a pixel t-test to determine if the pixels had changed significantly since the Beirut bombing. The effectiveness of the algorithm was demonstrated by combining SAR image changes with UN losses in the placebo test. This fully demonstrates the advantages of SAR to be able to perform the mission of detailed change detection in disaster scenarios.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/1-s2.0-S0924271619300425-gr1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The amount of GEOBIA literature and some associated triggers(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>)</figcaption>
+<p><img src="images/beirut_change_2020.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Pixelwise T-Test to determine pixel changes from the 2020 Beirut bombing (<a href="https://oballinger.github.io/PWTT/blast.html#change-detection">Open Access Damage Detection Using Sentinel-1 Imagery</a>)</figcaption>
 </figure>
 </div>
+<p>Based on the above applications, I believe that the joint use of optical and SAR remote sensing data in the future, the application of multi-band multi-dimensional SAR has been the trend of the application of this product, and at the same time, because of its working mechanism that is not affected by the weather time conditions, it is very important for the finer and long time monitoring tasks.</p>
 </section>
-<section id="reflection" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.3</span> Reflection</h2>
-<p>After two weeks of learning about the classification process in remote sensing in detail, last week focused on the basic methods of classification such as CART, Random Forest and Support Vector Machines. This was mainly about classifying for single pixels, and this week further emphasised on classifying for super-pixel cases, and sub-pixel cases, as a step-by-step process. It had not occurred to me last week that there would also be classification for different objects, and this week’s classification study has inspired me. Indeed, in practical remote sensing applications, the needs are constantly increasing, so the classification methods are constantly improving. I think in the future, continue to improve the robustness of multispectral image segmentation algorithms, improve the edge, time and other feature sets, and improve the classification rules of decision trees(<a href="https://doi.org/10.1007/s11769-006-0282-0">Liu et al.&nbsp;2006</a>) will have continued research value in the field, and I also hope that more learning based on the object to complete the ecological monitoring aspects of the work, which is greatly beneficial to sustainable development and disaster monitoring.</p>
-<p>Meanwhile after a few weeks of systematic learning, we had a general understanding of the process of processing remote sensing data once we got it, just like the process of classification, which is from class definition, preprocessing, training, pixel assignment, and then accuracy assessment, and in the practical exercises, we also used GEE to understand how most of them work, which helped us to understand what we had learnt in the class. I also learnt through searching for applications that despite the different objects being classified, the classification tool methods used (e.g.&nbsp;decision trees) are common, which more than anything else allowed me to tie the two weeks of classes together.</p>
-<p>This week’s course also brought us a lot of dialectical thinking, through the study of accuracy verification I learnt that the starting point for thinking about a problem and evaluating the results is different for different objects (producers and users), and that we have different criteria for evaluating the results in different application scenarios. As in the example of kappa coefficients, their interpretative and imperative nature is not entirely certain, despite the fact that many scholars see them as agreed-upon steps. I think this is the idea that the instructor has been instilling in this course, to maintain <em>CRITICAL THINKING</em>, even in published articles.</p>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>Up to this point, we have learnt about everything from understanding remote sensing data, to pre-processing, to using GEE for some simple classification, and then this week furthering our understanding of a specific remote sensing product, SAR.</p>
+<p>In this chapter, the benefits of SAR, such as the high resolution capabilities and the ability to operate year round, were specifically demonstrated, and the instructor also brought the benefits of the product to life through a specific case study of the Beirut bombing. Among them, I was amazed by SAR’s outstanding performance in terms of high accuracy. For example, in the study (<a href="https://oballinger.github.io/PWTT/images/ICLR_poster.pdf">Ballinger &amp; Donchyts 2023</a>) mentioned by the professor, the damage to the buildings in the city damaged during the war in Ukraine was monitored using the pixel dimension T-test algorithm, and at the same time it was able to generate a real-time map of the damage, and this real-time monitoring function and level of refinement was breathtaking to me.</p>
+<p>As the teacher threw out the question, “SAR is very useful because it can penetrate the clouds, unlike optical sensors (e.g.&nbsp;Landsat), but how is it useful for our analysis?” In the example above it is illustrated that the use of SAR means that monitoring models can be deployed almost anywhere on the planet regardless of atmospheric conditions and time of day, as well as ingesting new imagery in a timely and increasingly accurate manner, which I think is extremely helpful for disaster prevention and mitigation, post-disaster post-war monitoring, and ecological monitoring applications.</p>
+<p>I am also concerned that SAR is also capable of monitoring the growth of agricultural crops over the entire climatic period, and by combining it with optical data, it can realise effective monitoring of agricultural targets. I think this technology is particularly important for the agricultural development of my home country China, which, as a large agricultural country, has a great demand for precision agriculture, and I can hope to apply remote sensing technology to enhance the development of the agricultural economy. I also hope to apply remote sensing technology to enhance the development of agricultural economy.</p>
+<p>After a semester of Remotely Sensing Cities and Environments, I have slowly gained a new understanding of this field from a beginner in remote sensing, and have learnt about the concrete usefulness and infinite possibilities of remote sensing for the real society. I hope that in the future remote sensing technology will be known to more people and become a technology integrated into everyone’s life. I would like to thank the teacher for his careful preparation of this course and hope that the Earth will become better!</p>
 </section>
-<section id="references" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="references"><span class="header-section-number">7.4</span> References</h2>
-<p>Blaschke, T., 2010. Object based image analysis for remote sensing, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 65, nr. 1, s. 2–16.<br>
+<section id="references" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="references"><span class="header-section-number">8.4</span> References</h2>
+<p>Ballinger, D.O. &amp; Donchyts, D.G., 2023. A New Algorithm for Persistent Building Damage Detection in Synthetic Aperture Radar Imagery.</p>
+<p>Canty, M.J., 2019. <em>Image Analysis, Classification and Change Detection in Remote Sensing: With Algorithms for Python, Fourth Edition</em>. 4. udgave. Boca Raton: CRC Press.<br>
 </p>
-<p>Foody, G.M., 2020. Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification, <em>Remote Sensing of Environment</em>, årg. 239, s. 111630.<br>
+<p>Chu, T. et al., 2020. Novel fusion method for SAR and optical images based on non-subsampled shearlet transform, <em>International Journal of Remote Sensing</em>. Taylor &amp; Francis, årg. 41, nr. 12, s. 4590–4604.<br>
 </p>
-<p>Hossain, M.D.&nbsp;&amp; Chen, D., 2019. Segmentation for Object-Based Image Analysis (OBIA): A review of algorithms and challenges from remote sensing perspective, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 150, s. 115–134.<br>
+<p>Li, X. et al., 2022. Multi-Band and Polarization SAR Images Colorization Fusion, <em>Remote Sensing</em>. Multidisciplinary Digital Publishing Institute, årg. 14, nr. 16, s. 4022.<br>
 </p>
-<p>Liu, Y. et al., 2006. Review of remotely sensed imagery classification patterns based on object-oriented image analysis, <em>Chinese Geographical Science</em>, årg. 16, nr. 3, s. 282–288.<br>
+<p>Liu, C. et al., 2019. Research advances of SAR remote sensing for agriculture applications: A review, <em>Journal of Integrative Agriculture</em>, årg. 18, nr. 3, s. 506–525.<br>
 </p>
-<p>Rees, G., 1989. Remote Sensing - Digital image processing in remote sensing., <em>Polar Record</em>, årg. 25, nr. 152, s. 67–67.<br>
+<p>Ruan, X. et al., 2011. <em>Performance Experiment of Classification Using Chinese Airborne Multi-Band and Multi-Polar SAR Data</em> [Online]. Tengchong, Yunnan, China: IEEE.<br>
 </p>
-<p>Suneetha, M. et al., 2020. <em>Object based Classification of Multispectral Remote Sensing Images for Forestry Applications</em> [Online]. New York, NY, USA: Association for Computing Machinery.</p>
+<p>Shah, E., Jayaprasad, P. &amp; James, M.E., 2019. Image Fusion of SAR and Optical Images for Identifying Antarctic Ice Features, <em>Journal of the Indian Society of Remote Sensing</em>, årg. 47, nr. 12, s. 2113–2127.<br>
+</p>
+<p>Teimouri, M., Mokhtarzade, M. &amp; Valadan Zoej, M.J., 2016. Optimal fusion of optical and SAR high-resolution images for semiautomatic building detection, <em>GIScience &amp; Remote Sensing</em>. Taylor &amp; Francis, årg. 53, nr. 1, s. 45–62.<br>
+</p>
+<p>Zhang, W. et al., 2022. Adaptive Contourlet Fusion Clustering for SAR Image Change Detection, <em>IEEE Transactions on Image Processing</em>, årg. 31, s. 2295–2308.<br>
+</p>
+<p>Zhang, Y. et al., 1998. <em>SAR interferometry: phase unwrapping by fringe-line detection</em> [Online]. SPIE.</p>
 
 
 </section>
@@ -798,14 +712,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./week7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></span>
+      <a href="./week8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./week9.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">week9-SAR</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
