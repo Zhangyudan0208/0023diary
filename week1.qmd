@@ -19,7 +19,7 @@ The content of this chapter focuses on the working principles of active and pass
 Based on respective characteristics, we are able to summarize the benefits and limitations of each of the two types of remote sensing.
 
 | Benefits                                                                                                                                    | Limitations                                                                                          |
-|------------------------------------------|------------------------------|
+|--------------------------------------|------------------------------|
 | 1\. Unaffected by sunlight and able to observe both day and night.                                                                          | 1\. Reflected signals may be interfered with by other objects in nature or by electromagnetic noise. |
 | 2\. More sensors, need to adjust the wavelength of emission, able to measure height, terrain, wind, etc.                                    | 2\. Requires its own energy to transmit signals, limiting its use in drones or satellite platforms.  |
 | 3\. Have penetration capabilities such as SAR to penetrate clouds and vegetation to obtain information on surface or subsurface structures. |                                                                                                      |
@@ -27,48 +27,47 @@ Based on respective characteristics, we are able to summarize the benefits and l
 : Table 2. Comparison of advantages and disadvantages of active remote sensing
 
 | Benefits                                                                                                                                                                | Limitations                                                                                                                                                                                                                                                             |
-|----------------------------|--------------------------------------------|
+|--------------------------------------|--------------------------------------------|
 | 1\. Low energy consumption, requiring less energy, long mission times, low manufacturing and operating costs, and can be easily deployed and utilized on a large scale. | 1\. Dependent on lighting conditions, performance is limited under poor ambient light conditions. The spectral range is also dependent on the spectral properties of the natural light source, resulting in limitations in observing certain specific wavelength bands. |
-| 2\. Capable of capturing a wide range of spectral information using sunlight, it is suitable for multiple scenarios                                                     | 2\. The received irradiance is mainly off-water irradiance, which can only be observed in specific atmospheric windows, and signals in other bands will be absorbed and masked. Susceptible to atmospheric components.                                                  |
+| 2\. Capable of capturing a wide range of spectral information using sunlight, it is suitable for multiple scenarios.                                                    | 2\. The received irradiance is mainly off-water irradiance, which can only be observed in specific atmospheric windows, and signals in other bands will be absorbed and masked. Susceptible to atmospheric components.                                                  |
 
 : Table 3. Comparison of advantages and disadvantages of passive remote sensing
 
-Future Development Trends
+-   Future Development Trends
 
 1.  Miniaturization and refinement of equipment: I believe that remote sensing equipment needs to address its own limitations, for example, active remote sensing equipment needs to become smaller and lighter in order to be deployed on a wide range of platforms. Similarly, passive remote sensing should be widely used in low-cost, high-frequency Earth observation missions.
 
 2.  Continued integration with machine learning: Advanced algorithms are indispensable for both processing and analyzing remote sensing data. Deep learning models such as convolutional neural networks (CNN) are now widely used to automatically identify and classify features from active remote sensing data.
 
-![Active and passive microwave satellites are widely used on global and regional scales to invert surface soil moisture changes ([Mousa et al. 2020](https://www.mdpi.com/2072-4292/12/22/3804))](images/remotesensing-12-03804-ag.png){width="488"}
+![Figure 1. Active and passive microwave satellites are widely used on global and regional scales to invert surface soil moisture changes ([Mousa et al. 2020](https://www.mdpi.com/2072-4292/12/22/3804))](images/remotesensing-12-03804-ag.png){width="424"}
 
 In the future, there is a need to develop more optimized machine learning models that combine active and passive remote sensing data to be able to process and interpret remote sensing data more accurately.
 
 ### Consider how electromagnetic waves interact
 
-Interactions at the Earth's surface
+-   Interactions at the Earth's surface
 
 1.  Absorption by surfaces: Surface materials absorb electromagnetic waves of certain wavelengths. For example, vegetation strongly absorbs infrared light but reflects near-infrared light. By observing the absorption properties at specific wavelengths, the nature and condition of the surface material can be inferred.
 
 2.  Transmission through the surface: When electromagnetic waves such as sunlight reach the Earth's surface, they are reflected back into space. Different surface types, such as water bodies, vegetation, and urban buildings, have different reflectance properties that can be quantified by a bidirectional reflectance distribution function (BRDF). By analyzing the reflectance at different wavelengths, surface materials can be identified and classified.
 
-Atmospheric interactions
+-   Atmospheric interactions
 
-1.Scattering: as electromagnetic waves pass through the atmosphere, they scatter with gas molecules, water droplets, and other particles in the atmosphere. For example, Rayleigh scattering gives the sky a blue color. This scattering changes the direction and intensity of electromagnetic waves and affects the quality of remotely sensed data.
+1.  Scattering: As electromagnetic waves pass through the atmosphere, they scatter with gas molecules, water droplets, and other particles in the atmosphere. For example, Rayleigh scattering gives the sky a blue color. This scattering changes the direction and intensity of electromagnetic waves and affects the quality of remotely sensed data.
+2.  Countermeasure: Removal of the sensor's exposure to atmospheric scattering using synthetic aperture radar (SAR) and through atmospheric correction
 
-2.Countermeasure: Removal of the sensor's exposure to atmospheric scattering using synthetic aperture radar (SAR) and through atmospheric correction
-
-![Helping to Understand the Principles of Observations Using the Electromagnetic Spectrum ([NASA Science](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))](images/EMS-Introduction_0.jpg){width="644"}
+![Figure 2. Helping to Understand the Principles of Observations Using the Electromagnetic Spectrum ([NASA Science](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))](images/EMS-Introduction_0.jpg){width="644"}
 
 ### Resolution
 
-We explored 4 resolutions for remotely sensed data
+We explored 4 resolutions for RS data
 
-| Resolution type | Characteristic explanation                                                                                                                                                                                                                                              |
-|------------|------------------------------------------------------------|
-| Spectral        | Obtaining values for each wavelength (or band of multiple wavelengths) in the electromagnetic spectrum to create spectral features, which may be discrete (multispectral) or continuous (hyperspectral)                                                                 |
-| Spatial         | In most cases, remotely sensed data are rasters. Spatial resolution refers to the size of the raster image element                                                                                                                                                      |
-| Temporal        | Temporal resolution relates to how frequently surface data are updated, the time interval between revisits to the same location by a remote sensing sensor                                                                                                              |
-| Radiometric     | The ability of a sensor to recognize and display small differences in energy. For example, an 8-bit image can represent 256 different gray levels (or colors). In an 8-bit image, the transition from dark to light is smoother and more subtle changes can be captured |
+| Resolution  | Characteristic                                                                                                                                                                                                                               |
+|-----------|-------------------------------------------------------------|
+| Spectral    | Obtaining values for each wavelength (or band of multiple wavelengths) in the electromagnetic spectrum to create spectral features, which may be discrete (multispectral) or continuous (hyperspectral)                                      |
+| Spatial     | The size of the raster image element. In most cases, RS data are rasters                                                                                                                                                                     |
+| Temporal    | How frequently surface data are updated, the time interval between revisits to the same location by a sensor                                                                                                                                 |
+| Radiometric | The ability of a sensor to recognize and display small differences in energy (an 8-bit image can represent 256 different gray levels (or colors) and the transition from dark to light is smoother and more subtle changes can be captured). |
 
 : Table 4. Distinction between four remote sensing resolutions
 
@@ -76,7 +75,7 @@ Notably, sensors that are able to resolve narrower band widths, have more bands,
 
 Often temporal and spatial resolution together influence the suitability of remotely sensed data for a particular application, e.g. a sensor with a low spatial resolution but a high temporal resolution (MODIS) is better suited for tracking and monitoring environmental change or agricultural development, etc.
 
-![Different spatial resolutions are available for specific observation or research needs ([NASA Earthdata](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))](images/Spatial-Resolution-Basics.jpg){width="624"}
+![Figure 3. Different spatial resolutions are available for specific observation or research needs ([NASA Earthdata](https://www.earthdata.nasa.gov/learn/backgrounders/remote-sensing))](images/Spatial-Resolution-Basics.jpg){width="624"}
 
 ## Applications
 
@@ -84,15 +83,17 @@ Often temporal and spatial resolution together influence the suitability of remo
 
 Firstly, remote sensing technology can be applied to Earth issues at different spatial scales, from a small pixel to a scene, from a region to a country, and has become the main way of global Earth observation.
 
-![The use of the Sunglint phenomenon (sunlight reflected off the surface of the water to make the water appear grey, silver or white) can help to monitor the pattern of currents on the surface of the ocean around the Canary Islands ([LANCE/EOSDIS MODIS Rapid Response Team](https://www.earthdata.nasa.gov/learn/find-data/near-real-time/rapid-response)).](images/canaries_tmo_2002136.jpg){width="593"}
+![Figure 4. The use of the Sunglint phenomenon (sunlight reflected off the surface of the water to make the water appear grey, silver or white) can help to monitor the pattern of currents on the surface of the ocean around the Canary Islands ([LANCE/EOSDIS MODIS Rapid Response Team](https://www.earthdata.nasa.gov/learn/find-data/near-real-time/rapid-response)).](images/canaries_tmo_2002136.jpg){width="593"}
 
 In addition, remote sensing has the technology to analyse across time, and dynamic monitoring of indicators such as temperature, precipitation, biomass and other indicators in nature or targets such as lakes, rivers and roads can be accomplished in instantaneous or long time series, which can be determined by the temporal resolution of different remote sensing.
 
 ### Remote sensing technology has been used in all aspects of natural resources and human activities.
 
-In the field of environment remote sensing can perform a series of environmental monitoring including soil erosion, water pollution, urban heat island, etc. Xu et al. (Xu & Chen 2004) 6th band acquisition of thermal remote sensing data from Landsat TM/ETM+ imagery observed the changes of urban heat island phenomenon in Xiamen, China within 11 years. In resource management remote sensing can be engaged in geological structure identification, glacier, coastline and island change monitoring, etc. Ke et al. ([Ke et al. 2016](https://www.webofscience.com/wos/woscc/full-record/WOS:000389576700094)) demonstrated different types of glaciers in three typical glacier-intensive subregions of the plateau based on elevation data from ICESat and Landsat images. In disaster prevention and mitigation, the role of remote sensing in monitoring extreme weather such as El Niño is irreplaceable.Hoque et al. ([Hoque et al. 2017](https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=WOS&KeyAID=10.1016%2Fj.ijdrr.2017.02.008&DestApp=DOI&SrcAppSID=EUW1ED0A9C9Z68zD6Pv4R2FwOSJfi&SrcJTitle=INTERNATIONAL+JOURNAL+OF+DISASTER+RISK+REDUCTION&DestDOIRegistrantName=Elsevier)) suggest that object-based image analysis using optical images with a resolution of up to 30 metres can provide better impact assessment and recovery from tropical cyclones. I believe that the role of remote sensing in global environmental monitoring and response to climate change will be further enhanced as the impacts of global environment and climate change become more significant.
+In the field of environment remote sensing can perform a series of environmental monitoring including soil erosion, water pollution, urban heat island, etc. Xu et al. ([Xu & Chen 2004](https://www.researchgate.net/publication/8567631_Remote_sensing_of_the_urban_heat_island_and_its_changes_in_Xiamen_City_of_SE_China)) used 6th band acquisition of thermal remote sensing data from Landsat TM/ETM+ imagery to observe the changes of urban heat island phenomenon in Xiamen, China within 11 years. In resource management remote sensing can be engaged in geological structure identification, glacier, coastline and island change monitoring, etc. Ke et al. ([Ke et al. 2016](https://www.webofscience.com/wos/woscc/full-record/WOS:000389576700094)) demonstrated different types of glaciers in three typical glacier-intensive subregions of the plateau based on elevation data from ICESat and Landsat images. In disaster prevention and mitigation, the role of remote sensing in monitoring extreme weather such as El Niño is irreplaceable.Hoque et al. ([Hoque et al. 2017](https://www.webofscience.com/api/gateway?GWVersion=2&SrcAuth=DOISource&SrcApp=WOS&KeyAID=10.1016%2Fj.ijdrr.2017.02.008&DestApp=DOI&SrcAppSID=EUW1ED0A9C9Z68zD6Pv4R2FwOSJfi&SrcJTitle=INTERNATIONAL+JOURNAL+OF+DISASTER+RISK+REDUCTION&DestDOIRegistrantName=Elsevier)) suggest that object-based image analysis using optical images with a resolution of up to 30 metres can provide better impact assessment and recovery from tropical cyclones.
 
-![Recognition applications of remote sensing also need to be continually refined, as reflected in this Himalayan MODIS image of 1 November 2013, which reflects the fact that it is not always possible to distinguish between haze, fog, clouds and snow in the visual interpretation of satellite imagery ([How to Interpret a Satellite Image: Five Tips and Strategies](https://earthobservatory.nasa.gov/features/ColorImage))](images/himalaya_amo_2013305.jpg){width="573"}
+I believe that the role of remote sensing in global environmental monitoring and response to climate change will be further enhanced as the impacts of global environment and climate change become more significant.
+
+![Figure 5. Recognition applications of remote sensing also need to be continually refined. This Himalayan MODIS image of 1 November 2013 reflects the fact that it is not always possible to distinguish between haze, fog, clouds and snow in the visual interpretation of satellite imagery ([How to Interpret a Satellite Image: Five Tips and Strategies](https://earthobservatory.nasa.gov/features/ColorImage))](images/himalaya_amo_2013305.jpg){width="573"}
 
 ## Reflection
 
@@ -104,8 +105,7 @@ In my future studies, I hope to get more exposure to different remote sensing se
 
 Hoque, M.A.-A. et al., 2017. Tropical cyclone disaster management using remote sensing and spatial analysis: A review, *International Journal of Disaster Risk Reduction*. Amsterdam: Elsevier, årg. 22, s. 345--354.
 
-Ke, L. et al., 2016. *Remote sensing of glacier distribution and change over the Qinghai-Tibet Plateau* \[Online\]. New York: IEEE.\
-[https://www.webofscience.com/wos/woscc/full-record/WOS:000389576700094]{.underline}
+Ke, L. et al., 2016. *Remote sensing of glacier distribution and change over the Qinghai-Tibet Plateau* \[Online\]. New York: IEEE.
 
 Xu, H.Q. & Chen, B.Q., 2004. Remote sensing of the urban heat island and its changes in Xiamen City of SE China, *International journal of disaster risk reduction*, årg. 16, nr. 2, s. 276--281.\
 \
