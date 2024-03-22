@@ -19,14 +19,14 @@ The main principle of the method is related to hyperpixels. It aggregates neighb
 -   Advantages:
 
 |     |                                                                                                                                                                                              |
-|-----|-------------------------------------------------------------------|
+|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1\. | Can more accurately represent the actual objects on the ground such as buildings, more accurate classification results                                                                       |
 | 2\. | Has a variety of classifiers and software packages that can use different algorithms to provide more complex analyses and functions, such as Supercells package can use any distance measure |
 
 -   Limitations:
 
 |     |                                                                                                                                                 |
-|-----|-------------------------------------------------------------------|
+|-----|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1\. | Does not take into account the connectivity between superpixels, which may lead to very small and difficult to interpret classification regions |
 | 2\. | using the Euclidean distance metric limits the suitable data types and classification needs.                                                    |
 | 3\. | Performed in LAB colour space, which requires conversion of the raw data, affecting the accuracy of the classification.                         |
@@ -44,14 +44,14 @@ The basic principle is that the reflectance captured by a pixel is a combination
 -   Advantages:
 
 |     |                                                                                                                                                                                                                    |
-|-----|-------------------------------------------------------------------|
+|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1\. | Provides a more detailed understanding of land cover by disaggregating the components within a pixel, further effectively improving the resolution of land cover information compared to full pixel classification |
 | 2\. | better capture minor changes in the landscape as the land is monitored over time                                                                                                                                   |
 
 -   Limitations:
 
 |     |                                                                                                                   |
-|-----|-------------------------------------------------------------------|
+|-----|-------------------------------------------------------------------------------------------------------------------|
 | 1\. | Computationally complex, the more end-elements considered the more computationally intensive                      |
 | 2\. | Accuracy depends on the purity of the end elements. Impure spectral features can lead to unreliable results       |
 | 3\. | Analyses are limited by spectral library data, so comprehensive spectral libraries are needed as much as possible |
@@ -65,7 +65,7 @@ Confusion matrices are often used when performing accuracy assessments, being ab
 -   Classification of accuracy values
 
 | Accuracy value      | Definition                                                                                                                                                                                                                                                    |
-|----------|--------------------------------------------------------------|
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Producer's accuracy | A measure of accuracy from the producer's perspective. Indicates the ratio of pixels that are correctly classified to all relevant pixels in that category (i.e., the sum of true positives and false negatives)                                              |
 | User accuracy       | Measures the ratio of correctly classified pixels to all pixels classified as that category (i.e., the sum of true positives and false positives). User accuracy is concerned with whether a pixel classified as a category actually belongs to that category |
 | Overall Accuracy    | Indicates the proportion of correctly classified pixels across all categories and reflects the overall performance of the classification model                                                                                                                |
@@ -87,7 +87,7 @@ The number of folds is equal to the number of data points, and each iteration us
 Due to the first law of geography (observations close to each other are more likely to be similar), the method spatially partitions the data so that the training and validation sets are not geographically intersected to avoid due to spatial autocorrelation.
 
 | Characteristic          | Definition                                                                                                                 |
-|----------------|--------------------------------------------------------|
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------|
 | 1\. Advantage           | in reducing the risk of overfitting the model to spatially similar data                                                    |
 | 2\. Requirement         | Sufficient data distribution is needed to create meaningful spatial partitions                                             |
 | 3\. Optimisation        | the hyperparameters of the SVM classifier need to be tuned to balance the model complexity and generalisation capabilities |
@@ -101,11 +101,11 @@ In conjunction with this week's classification method, I have taken a look at it
 
 Land use information has been extracted in different ways at different times in the development of remote sensing technology. In the early days, images captured by remote sensing sensors had larger pixels than ground features at low and medium resolution, so subpixel analysis was needed to respond to land class features([Blaschke 2010](https://www.sciencedirect.com/science/article/pii/S0924271609000884)). However, in the gradual increase of high-resolution imagery applications, the pixel-based analysis method is not able to respond to the spatial variations of land cover, so object-based image analysis becomes an effective method in high spatial resolution imagery applications. Due to its spectral, spatial, textural, and topological characteristics, and its ability to respond to geographic information, there has been a gradual increase in the number of studies and techniques related to geographic object-based image analysis (GEOBIA) ([Rees 1989](https://www.cambridge.org/core/journals/polar-record/article/remote-sensing-digital-image-processing-in-remote-sensing-jp-muller-editor-1988-london-taylor-and-francis-275-p-illustrated-hard-cover-isbn-0850663148-3800-us8400/7CCF3D9EED97C78CE8C6AB431647C513)).
 
-Manne et al. ([Suneetha et al. 2020](Object based Classification of Multispectral Remote Sensing Images for Forestry Applications)) used object-based image analysis with three separate stages of segmentation, generation of training data and final classification to obtain the range of forestry based on remote sensing satellite images such as Deimos-2 and Cartosat-1. As learnt in the course. The measurement of the classification results was determined from four main aspects, namely, Producers Accuracy, Users Accuracy, Overall Accuracy and Kappa coefficient value. Although the accuracy value of the data in Cartosat-1 is low and the interpretation of the Kappa coefficient is debatable. However, it can show the usefulness of the method for multispectral image classification and can support the real needs such as ecological monitoring.
+Manne et al. ([Suneetha et al. 2020](Object%20based%20Classification%20of%20Multispectral%20Remote%20Sensing%20Images%20for%20Forestry%20Applications)) used object-based image analysis with three separate stages of segmentation, generation of training data and final classification to obtain the range of forestry based on remote sensing satellite images such as Deimos-2 and Cartosat-1. As learnt in the course. The measurement of the classification results was determined from four main aspects, namely, Producers Accuracy, Users Accuracy, Overall Accuracy and Kappa coefficient value. Although the accuracy value of the data in Cartosat-1 is low and the interpretation of the Kappa coefficient is debatable. However, it can show the usefulness of the method for multispectral image classification and can support the real needs such as ecological monitoring.
 
-![Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) ([Suneetha et al. 2020](https://dl.acm.org/doi/10.1145/3383812.3383824))](images/Classified map of Deimos-2 using OBIA technique with radius 5.png){width="532"}
+![Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) ([Suneetha et al. 2020](https://dl.acm.org/doi/10.1145/3383812.3383824))](images/Classified%20map%20of%20Deimos-2%20using%20OBIA%20technique%20with%20radius%205.png){width="532"}
 
-![Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples ([Suneetha et al. 2020](https://dl.acm.org/doi/10.1145/3383812.3383824))](images/Accuracy assessment of OBIA.png)
+![Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples ([Suneetha et al. 2020](https://dl.acm.org/doi/10.1145/3383812.3383824))](images/Accuracy%20assessment%20of%20OBIA.png)
 
 Hossain et al. ([Hossain & Chen 2019](https://www.sciencedirect.com/science/article/pii/S0924271619300425)) summarised the research trends in image analysis based on geographic objects, and were able to find that the ability to match objects segmented from images with meaningful geographic objects is the key challenge in this field, and we can intuitively see that the cases and tools for this classification technique are improving significantly, so I also believe that continuous improvement of image segmentation techniques is also the future direction of research.
 
