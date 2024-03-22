@@ -1,10 +1,10 @@
 ---
-title: "week2-NPP-VIIRS"
+title: "Week2-NPP-VIIRS"
 ---
 
 ## Xaringan Presentation - NPP-VIIRS
 
-The content for week 2 is a presentation in Xaringan on the Visible Infrared Imaging Radiometer Suite satellite. The presentation is below, and the summary, application and reflection are all included in the slides.
+The content for week 2 is a presentation in Xaringan on the Visible Infrared Imaging Radiometer Suite satellite (VIIRS). The presentation is below, and the summary (Summary of the sensor), application (Examples of research and its purpose) and reflection (Sensors use and how they can be used in future work)are all included in the slides.
 
 ```{r xaringan_embed, echo=FALSE}
 xaringanExtra::embed_xaringan(url = "https://zhangyudan0208.github.io/-xaringan/", ratio = "4:3")
