@@ -4,6 +4,16 @@ project:
 book:
   title: "Learning diary CASA0023"
   author: "Yudan Zhang"
+  favicon: "images/android-chrome-192x192.png"
+  navbar:
+    logo: "images/android-chrome-192x192.png"
+    collapse: true
+    collapse-below: lg
+    background: light
+    reader-mode: true
+    search: true
+    right:
+      - icon: github
   date: "2024/1/23"
   chapters:
     - index.qmd
