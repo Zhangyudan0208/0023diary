@@ -4,9 +4,9 @@ project:
 book:
   title: "Learning diary CASA0023"
   author: "Yudan Zhang"
-  favicon: "images/android-chrome-192x192.png"
+  favicon: "images/CASAlogo.png"
   navbar:
-    logo: "images/android-chrome-192x192.png"
+    logo: "images/CASAlogo.png"
     collapse: true
     collapse-below: lg
     background: light
@@ -18,7 +18,8 @@ book:
     logo: "images/android-chrome-192x192.png"
     style: docked
     reader-mode: true
-  date: "2024/1/23"
+  repo-url: https://github.com/Zhangyudan0208/0023diary.git
+  date: "2024/3/22"
   chapters:
     - index.qmd
     - week1.qmd
