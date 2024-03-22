@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Learning diary CASA0023 - 7&nbsp; week8-Classification II</title>
+<title>Learning diary CASA0023 - 7&nbsp; Week8-Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,6 +32,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="./">
 <link href="./week9.html" rel="next">
 <link href="./week7.html" rel="prev">
+<link href="./images/CASAlogo.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -44,11 +45,11 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
-  "location": "sidebar",
+  "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "start",
-  "type": "textbox",
+  "panel-placement": "end",
+  "type": "overlay",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -67,16 +68,40 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/CASAlogo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Learning diary CASA0023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+</ul>
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/Zhangyudan0208/0023diary.git" rel="" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./week8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week8-Classification II</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -86,16 +111,13 @@ ul.task-list li input[type="checkbox"] {
   </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">Learning diary CASA0023</a> 
-        <div class="sidebar-tools-main">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
-</div>
-    </div>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/android-chrome-192x192.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -119,37 +141,37 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">week2-NPP-VIIRS</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week2-NPP-VIIRS</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">week3-Remote sensing data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week3-Remote Sensing Data</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">week4-Policy applications</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week4-Policy Applications</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">week6-GEE</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week6-GEE</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week7-Classification</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./week8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week8-Classification II</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -184,7 +206,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">week8-Classification II</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week8-Classification II</span></h1>
 </div>
 
 
@@ -212,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/8.1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">After pre-processing and feature extraction with spectral gradient and K-means clustering, simple non-iterative clustering and calculation of NDVI, super-pixel segmentation, training of CART using training data, classification of multi-band images (I think further optimisation is needed for image segmentation of classification objects)</figcaption>
+<figcaption class="figure-caption">Figure 1. After pre-processing and feature extraction with spectral gradient and K-means clustering, simple non-iterative clustering and calculation of NDVI, super-pixel segmentation, training of CART using training data, classification of multi-band images (I think further optimisation is needed for image segmentation of classification objects)</figcaption>
 </figure>
 </div>
 <ul>
@@ -220,17 +242,17 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <table class="table">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 97%">
+<col style="width: 15%">
+<col style="width: 84%">
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>1.</td>
-<td>Can more accurately represent the actual objects on the ground such as buildings, more accurate classification results</td>
+<td>Can more accurately represent the actual objects on the ground such as buildings, more accurate classification results.</td>
 </tr>
 <tr class="even">
 <td>2.</td>
-<td>Has a variety of classifiers and software packages that can use different algorithms to provide more complex analyses and functions, such as Supercells package can use any distance measure</td>
+<td>Has a variety of classifiers and software packages that can use different algorithms to provide more complex analyses and functions, such as Supercells package can use any distance measure.</td>
 </tr>
 </tbody>
 </table>
@@ -239,13 +261,13 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <table class="table">
 <colgroup>
-<col style="width: 3%">
-<col style="width: 96%">
+<col style="width: 15%">
+<col style="width: 84%">
 </colgroup>
 <tbody>
 <tr class="odd">
 <td>1.</td>
-<td>Does not take into account the connectivity between superpixels, which may lead to very small and difficult to interpret classification regions</td>
+<td>Does not take into account the connectivity between superpixels, which may lead to very small and difficult to interpret classification regions.</td>
 </tr>
 <tr class="even">
 <td>2.</td>
@@ -265,13 +287,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/8.2.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Using Dar-es-salaam as the study area, the sub-pixel analysis was completed by using Landsat 8 with dynamic end-element extraction, calculating the average spectral value of the delineated area, and calculating the percentage of each pixel in the image for each end-element type.</figcaption>
+<figcaption class="figure-caption">Figure 2. Using Dar-es-salaam as the study area, the sub-pixel analysis was completed by using Landsat 8 with dynamic end-element extraction, calculating the average spectral value of the delineated area, and calculating the percentage of each pixel in the image for each end-element type.</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/8.3.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The subpixel images were enhanced and classified for each pixel with the largest percentage of land cover (e.g., 50% or more). Reducing the subpixel results to a single classification prepares the way for later use of traditional error matrix methods to assess classification accuracy.</figcaption>
+<figcaption class="figure-caption">Figure 3. The subpixel images were enhanced and classified for each pixel with the largest percentage of land cover (e.g., 50% or more). Reducing the subpixel results to a single classification prepares the way for later use of traditional error matrix methods to assess classification accuracy.</figcaption>
 </figure>
 </div>
 <ul>
@@ -279,8 +301,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <table class="table">
 <colgroup>
-<col style="width: 2%">
-<col style="width: 97%">
+<col style="width: 15%">
+<col style="width: 84%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -298,8 +320,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <table class="table">
 <colgroup>
-<col style="width: 4%">
-<col style="width: 95%">
+<col style="width: 16%">
+<col style="width: 83%">
 </colgroup>
 <tbody>
 <tr class="odd">
@@ -327,10 +349,10 @@ ul.task-list li input[type="checkbox"] {
 <li>Classification of accuracy values</li>
 </ul>
 <table class="table">
-<caption>Table of accuracy value type</caption>
+<caption>Table 1. Accuracy value type</caption>
 <colgroup>
-<col style="width: 7%">
-<col style="width: 92%">
+<col style="width: 18%">
+<col style="width: 81%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -354,7 +376,7 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 <p>In fact, application scenarios as well as requirements have to be considered when assessing the accuracy of classification models. For example, for land cover change detection, high overall accuracy may be most important. And for environmental monitoring, user accuracy may be more critical.</p>
-<p>Generally the Kappa coefficient can be used to assess the difference between classification accuracy and random classification accuracy, with higher values indicating better classification accuracy and greater likelihood of exceeding random classification. However, it has also been argued (<a href="https://www.sciencedirect.com/science/article/pii/S0034425719306509">Foody 2020</a>) that the Kappa coefficient does not directly reflect accuracy; it is simply a measure of classification consistency beyond the random level, and can indicate either consistency obtained by chance alone or almost perfect consistency, and the interpretation of its true significance is often ambiguous.</p>
+<p>Generally the Kappa coefficient can be used to assess the difference between classification accuracy and random classification accuracy, with higher values indicating better classification accuracy and greater likelihood of exceeding random classification. However, it has also been argued (<a href="https://www.sciencedirect.com/science/article/pii/S0034425719306509">Foody 2020</a>) that the Kappa coefficient does not directly reflect accuracy. It is simply a measure of classification consistency beyond the random level, and can indicate either consistency obtained by chance alone or almost perfect consistency, and the interpretation of its true significance is often ambiguous.</p>
 <ol start="2" type="1">
 <li>Validation data with cross-validation methods</li>
 </ol>
@@ -367,10 +389,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Due to the first law of geography (observations close to each other are more likely to be similar), the method spatially partitions the data so that the training and validation sets are not geographically intersected to avoid due to spatial autocorrelation.</p>
 <table class="table">
-<caption>Characteristics of Spatial cross-validation</caption>
+<caption>Table 2. Characteristics of Spatial cross-validation</caption>
 <colgroup>
-<col style="width: 16%">
-<col style="width: 83%">
+<col style="width: 22%">
+<col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -407,20 +429,20 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Classified map of Deimos-2 using OBIA technique with radius 5.png" class="img-fluid figure-img" width="532"></p>
-<figcaption class="figure-caption">Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
+<figcaption class="figure-caption">Figure 4. Classified map of Deimos-2 using OBIA technique with radius 5 in (a) and 10 in (b) (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/Accuracy assessment of OBIA.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
+<figcaption class="figure-caption">Figure 5. Accuracy assessment of OBIA: Deimos-2 (R 10) 150 samples (<a href="https://dl.acm.org/doi/10.1145/3383812.3383824">Suneetha et al.&nbsp;2020</a>)</figcaption>
 </figure>
 </div>
 <p>Hossain et al.&nbsp;(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>) summarised the research trends in image analysis based on geographic objects, and were able to find that the ability to match objects segmented from images with meaningful geographic objects is the key challenge in this field, and we can intuitively see that the cases and tools for this classification technique are improving significantly, so I also believe that continuous improvement of image segmentation techniques is also the future direction of research.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/1-s2.0-S0924271619300425-gr1.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">The amount of GEOBIA literature and some associated triggers(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>)</figcaption>
+<figcaption class="figure-caption">Figure 6. The amount of GEOBIA literature and some associated triggers(<a href="https://www.sciencedirect.com/science/article/pii/S0924271619300425">Hossain &amp; Chen 2019</a>)</figcaption>
 </figure>
 </div>
 </section>
@@ -432,16 +454,11 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="references" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="references"><span class="header-section-number">7.4</span> References</h2>
-<p>Blaschke, T., 2010. Object based image analysis for remote sensing, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 65, nr. 1, s. 2–16.<br>
-</p>
-<p>Foody, G.M., 2020. Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification, <em>Remote Sensing of Environment</em>, årg. 239, s. 111630.<br>
-</p>
-<p>Hossain, M.D.&nbsp;&amp; Chen, D., 2019. Segmentation for Object-Based Image Analysis (OBIA): A review of algorithms and challenges from remote sensing perspective, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 150, s. 115–134.<br>
-</p>
-<p>Liu, Y. et al., 2006. Review of remotely sensed imagery classification patterns based on object-oriented image analysis, <em>Chinese Geographical Science</em>, årg. 16, nr. 3, s. 282–288.<br>
-</p>
-<p>Rees, G., 1989. Remote Sensing - Digital image processing in remote sensing., <em>Polar Record</em>, årg. 25, nr. 152, s. 67–67.<br>
-</p>
+<p>Blaschke, T., 2010. Object based image analysis for remote sensing, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 65, nr. 1, s. 2–16.</p>
+<p>Foody, G.M., 2020. Explaining the unsuitability of the kappa coefficient in the assessment and comparison of the accuracy of thematic maps obtained by image classification, <em>Remote Sensing of Environment</em>, årg. 239, s. 111630.</p>
+<p>Hossain, M.D.&nbsp;&amp; Chen, D., 2019. Segmentation for Object-Based Image Analysis (OBIA): A review of algorithms and challenges from remote sensing perspective, <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, årg. 150, s. 115–134.</p>
+<p>Liu, Y. et al., 2006. Review of remotely sensed imagery classification patterns based on object-oriented image analysis, <em>Chinese Geographical Science</em>, årg. 16, nr. 3, s. 282–288.</p>
+<p>Rees, G., 1989. Remote Sensing - Digital image processing in remote sensing., <em>Polar Record</em>, årg. 25, nr. 152, s. 67–67.</p>
 <p>Suneetha, M. et al., 2020. <em>Object based Classification of Multispectral Remote Sensing Images for Forestry Applications</em> [Online]. New York, NY, USA: Association for Computing Machinery.</p>
 
 
@@ -799,7 +816,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./week7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">week7-Classification</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week7-Classification</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
