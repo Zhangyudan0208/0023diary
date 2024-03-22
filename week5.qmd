@@ -1,5 +1,5 @@
 ---
-title: "week6-GEE"
+title: "Week6-GEE"
 ---
 
 ## Summary
@@ -24,7 +24,7 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 |                                                  | 7\. Mercator projection is used by default and the user usually does not need to be concerned with projections in GEE. The platform is responsible for transforming and displaying all data in a common projection.                                                                                                                                                                                                                                                                    |
 +--------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-: Summary of GEE characteristics
+: Table 1. Summary of GEE characteristics
 
 ### Simple operations at GEE
 
@@ -36,17 +36,17 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 
 3.  Collections: Feature collections are compilations of Features that can be used to represent more complex data sets with spatial and attribute data. Image collections are stacks of raster images. Allows the user to load, manipulate and analyse multiple images as a cohesive data set.
 
-![Loading and displaying Landsat 9 satellite imagery using specific geographic locations (New Delhi), time frames (January and February 2020) and cloud coverage conditions (less than 10%)](images/新建%20PPTX%20演示文稿_页面_1.jpg){width="619"}
+![Figure 1. Loading and displaying Landsat 9 satellite imagery using specific geographic locations (New Delhi), time frames (January and February 2020) and cloud coverage conditions (less than 10%)](images/新建%20PPTX%20演示文稿_页面_1.jpg){width="619"}
 
 -   Reduce image data
 
-1.  Reduction of image collections, using a function to extract the extreme or aggregated values for each pixel in the collection
+1.  Reduction of image collections, using a function to extract the extreme or aggregated values for each pixel in the collection.
 
-2.  region reduction, which generates statistical data for images within a specified study area
+2.  Region reduction, which generates statistical data for images within a specified study area.
 
 3.  Neighbourhood reduction, a method of relating each pixel to the surrounding area, analyses the window of pixels around the central pixel.
 
-![Cropping the region defined by Delhi, the three bands \['SR_B4', 'SR_B3', 'SR_B2'\] were selected for visualisation, corresponding to the red, green and blue bands, which produces images close to true colour.](images/新建%20PPTX%20演示文稿_页面_2.jpg){width="559"}
+![Figure 2. Cropping the region defined by Delhi, the three bands \['SR_B4', 'SR_B3', 'SR_B2'\] were selected for visualisation, corresponding to the red, green and blue bands, which produces images close to true colour.](images/新建%20PPTX%20演示文稿_页面_2.jpg){width="559"}
 
 -   Regression
 
@@ -60,18 +60,23 @@ This week was a systematic introduction to the tool Google Earth Engine (GEE), s
 
 1.  Set: join two image collections based on common attributes or indexes; also can join different element collections together.
 
-2.  Joins: implemented through in the filter. leftField refers to the index or attribute in the primary dataset; rightField refers to the corresponding attribute in the secondary dataset.
+2.  Joins: implemented through in the filter. LeftField refers to the index or attribute in the primary dataset; RightField refers to the corresponding attribute in the secondary dataset.
 
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Joining type  | Principle                                                                                                                                                   |
-|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
++===============+=============================================================================================================================================================+
 | Simple join   | Matches any record in the secondary set to the primary set.                                                                                                 |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Inverted join | Keep any records in the primary set that have no matches in the secondary set.                                                                              |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Internal join | Return all matching records between the two collections as a new element collection.                                                                        |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Spatial join  | The join attributes are stored in the attributes of the elements. Intersection operations can be performed and spatial subsetting of data is also possible. |
++---------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-: Summary of joining types
+: Table 2. Summary of joining types
 
-![With regard to the analysis of power stations in the vicinity of protected areas, this includes the use of buffer zones (extending the buffer zone by 100 KM outside the boundaries of the protected area, adding the buffer zone to the map in red) and spatial connectivity (applying a spatial filter, filtering neighbouring elements by 100 kilometres distance, and saving the power stations that meet the criteria of the spatial filter to the attributes of the protected area feature).](images/新建%20PPTX%20演示文稿_页面_3.jpg){width="533"}
+![Figure 3. With regard to the analysis of power stations in the vicinity of protected areas, this includes the use of buffer zones (Extending the buffer zone by 100 KM outside the boundaries of the protected area, adding the buffer zone to the map in red) and spatial connectivity (Applying a spatial filter, filtering neighbouring elements by 100 KM distance, and saving the power stations that meet the criteria of the spatial filter to the attributes of the protected area feature).](images/新建%20PPTX%20演示文稿_页面_3.jpg){width="533"}
 
 ## Applications
 
@@ -81,21 +86,25 @@ Since this week is an introduction to the GEE platform, I'm going to explore why
 
 In traditional geographic information science (GIS) there are three main challenges([Yu & Gong 2012](https://doi.org/10.1080/01431161.2011.636081)):
 
-| No. | Challenge                                                                    |
-|-----|------------------------------------------------------------------------------|
-| 1   | Three-dimensional global representation and visualisation of geospatial data |
-| 2   | Pre-processing and mining of spatial big data                                |
-| 3   | Spatio-temporal techniques for studying geographic processes                 |
++------+------------------------------------------------------------------------------+
+| No.  | Challenge                                                                    |
++======+==============================================================================+
+| 1    | Three-dimensional global representation and visualisation of geospatial data |
++------+------------------------------------------------------------------------------+
+| 2    | Pre-processing and mining of spatial big data                                |
++------+------------------------------------------------------------------------------+
+| 3    | Spatio-temporal techniques for studying geographic processes                 |
++------+------------------------------------------------------------------------------+
 
-: Three GIS challenges that GEE can address
+: Table 3. Three GIS challenges that GEE can address
 
 The combination of Google Earth (2005) and GEE (2010) provides a platform for earth system science research and is an effective tool for the challenges faced by traditional GIS and meets the needs of global environmental change research. Compared to the visualisation capabilities of Google Earth, the cloud computing capability of GEE is an effective tool for the analysis of global geospatial big data ([Amani et al. 2020](https://ieeexplore.ieee.org/document/9184118)). The feature of providing free services to support more geospatial data is especially helpful for geographic research in less developed regions.
 
-### Appliance
+### Research using GEE
 
 With a long record of earth observations and algorithms for analysing geo-big data, GEE has a clear role in environmental monitoring and analysis. This includes all aspects of agriculture, water resources, disasters, climate change, forests, etc ([Bullock, Woodcock & Olofsson 2020](https://www.sciencedirect.com/science/article/pii/S0034425718305200), [Busker et al. 2019](https://hess.copernicus.org/articles/23/669/2019/), [Meilianda et al. 2019](https://www.sciencedirect.com/science/article/pii/S2212420918312524), [Workie & Debella 2018](https://www.sciencedirect.com/science/article/pii/S2351989417301646), [Xiong et al. 2017](https://www.sciencedirect.com/science/article/pii/S0924271616301575)). As combating climate change and reducing carbon emissions is a long-term global issue, I think the GEE platform can continue to play a role in this field, and focusing on this aspect of research can also help me find more inspiration.
 
-![Spatial distribution of Landsat optical and Sentinel-1A SAR data used to identify mangroves and associated water bodies([Chen et al. 2017](https://www.sciencedirect.com/science/article/pii/S092427161730285X))](images/1-s2.0-S092427161730285X-gr2_lrg.jpg)
+![Figure 4. Spatial distribution of Landsat optical and Sentinel-1A SAR data used to identify mangroves and associated water bodies([Chen et al. 2017](https://www.sciencedirect.com/science/article/pii/S092427161730285X))](images/1-s2.0-S092427161730285X-gr2_lrg.jpg)
 
 Chen et al.([Chen et al. 2017](https://www.sciencedirect.com/science/article/pii/S092427161730285X))used time-series Landsat, which provides biophysical features such as identification of greenness, canopy cover, and tidal inundation to map mangrove forests in China, and used the integration of Sentinel-1A with the modified Normalized Difference Water Index (mNDWI) to identify mangrove-associated water bodies. The whole process included six regions, and 1941 Landsat images and 586 Sentinel-1A images were run on GEE with an accuracy greater than 95%. Mangrove forests, as one of the most carbon-rich forests in the tropics, are of great significance for the study of sustainable management and carbon stock. Hao et al. ([Hao et al. 2019](https://www.mdpi.com/1424-8220/19/9/2118)) estimated the interannual variations of surface temperature and seasonally integrated normalised vegetation index (NVI) of the Three Gorges catchment area, China, from 2000-2015 by using the Moderate Resolution Imaging Spectroradiometer (MODIS) product on the GEE. Long-term monitoring is easily possible using the GEE platform.
 
