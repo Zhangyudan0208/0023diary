@@ -1,9 +1,13 @@
-# Preface {.unnumbered}
+# About the Author {.unnumbered}
 
-This is a Quarto book.
+Hello everyone. My name is Yudan Zhang, I am a Centre for Advanced Spatial Analysis graduate student studying MSc Urban Spatial Science from Chongqing, China.
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+In my undergraduate studies, I majored in Human Geography and Urban and Rural Planning, which I studied because I have a great love for geography, I like to discover geographic knowledge from life, and I also like to go to different places to investigate different landscapes, and humanities.
 
-```{r}
-1 + 1
-```
+![I'm in the fjords of Tromsø, Norway.](images/Author.jpg){width="398"}
+
+In my undergraduate studies, I have been exposed to some remote sensing knowledge, studied basic remote sensing courses, and have done some research before, for example, I used VIIRS night lighting data and Impervious Surface Area (ISA) data to obtain the process of urban expansion in Chongqing from 2008-2018.
+
+![Map of the urban land expansion of districts and counties in Chongqing during 2008--2018 ([Zhang 2022](https://www.mdpi.com/1660-4601/19/13/7792))](images/ijerph-19-07792-g007.jpg){width="405"}
+
+However, my experience in this field is still only using some mature remote sensing products, and my understanding of the process of remote sensing data acquisition, pre-processing, and analysing is very weak, and I hope to improve my knowledge of remote sensing in the course of this study. In addition, more importantly, I believe that remote sensing, as a research tool, can be of great help to environmental monitoring and ecological security, which is very much in line with the world's theme of dealing with the climate crisis and low-carbon development, and I am very happy to use remote sensing as a key to open the door of my environmental research, and to make contributions to sustainable development.
