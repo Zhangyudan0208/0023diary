@@ -14,6 +14,10 @@ book:
     search: true
     right:
       - icon: github
+  sidebar:
+    logo: "images/android-chrome-192x192.png"
+    style: docked
+    reader-mode: true
   date: "2024/1/23"
   chapters:
     - index.qmd
